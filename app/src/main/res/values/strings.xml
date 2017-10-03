@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FitnessTracker</string>
+
+    <string name="title_activity_splashscreen">splashscreen</string>
+    <string name="sign_up_button">Sign Up</string>
+    <string name="log_in_button">Log In</string>
+    <string name="username">Username : </string>
+    <string name="password">Password : </string>
+    <string name="confrimPassword">Confirm Password : </string>
+    <string name="emptyString"> </string>
+    <string name="createAccount">Create Account</string>
+    <string name="logIn">Log In</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title">Fitness Tracker</string>
+</resources>
