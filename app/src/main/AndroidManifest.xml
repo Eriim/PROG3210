@@ -12,7 +12,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".signUp" />
         <activity android:name=".activity_log_in" />
-        <activity android:name=".createProfile"></activity>
+        <activity android:name=".createProfile" />
         <activity
             android:name=".splashscreen"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -24,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".macroPlans"></activity>
     </application>
 
 </manifest>

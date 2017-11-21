@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.erictossell.fitnesstracker.macroPlans">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/black_overlay"
+            android:layout_span="1"
+            android:text="@string/selectPlan"/>
+    </TableRow>
+    <TableRow
+        android:id="@+id/hardCut"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/hardCutPlan"
+            />
+        <TextView
+            android:id="@+id/hardCutCalories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            />
+
+    </TableRow>
+    <TableRow
+        android:id="@+id/cut"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/cutPlan"
+            />
+        <TextView
+            android:id="@+id/cutCalories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            />
+
+
+    </TableRow>
+    <TableRow
+        android:id="@+id/maintenance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/maintenancePlan"
+            />
+        <TextView
+            android:id="@+id/maintenanceCalories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            />
+
+    </TableRow>
+    <TableRow
+        android:id="@+id/cleanBulk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/cleanBulkPlan"
+            />
+        <TextView
+            android:id="@+id/cleanBulkCalories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            />
+
+    </TableRow>
+    <TableRow
+        android:id="@+id/hardBulk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/hardBulkPlan"
+            />
+        <TextView
+            android:id="@+id/hardBulkCalories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            />
+
+    </TableRow>
+
+</TableLayout>

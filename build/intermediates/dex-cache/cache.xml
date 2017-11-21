@@ -3,21 +3,129 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\erict\Desktop\PROG3210-master\PROG3210\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
         jumboMode="true"
         optimize="true"
-        revision="26.0.1"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\erict\Desktop\PROG3210-master\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_0d91508935544f4c57f39836aed8d7e0a2cff81a\classes.dex" />
+        revision="25.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_dce0f5dc4ec87302d879250c45fe5f3f72f02917\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\erict\Desktop\PROG3210-master\PROG3210\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\etossell8259\.android\build-cache\fe9224aa24c6809a754f91b0c5b7e3ab6c80e8ff\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="26.0.1"
-        sha1="2fe263f7cea5fae6f3475ddce70ea3e2bb21f882">
-        <dex dex="C:\Users\erict\Desktop\PROG3210-master\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_7a1b893a26256b380a8877d744944cdde71c38df\classes.dex" />
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_41c0313b47b764a0f3dcc610f1384b3eca17835d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\etossell8259\.android\build-cache\6641c1d6edd829de8bb34e4b64a75629d6d2cded\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7e0b67dba74d8191ae45ca3e10ec3dddc7958b4a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\etossell8259\.android\build-cache\8bb98088595ed46114477afff2344d5f73d866b3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_91809dff81ab65b5f3a03b5dc21029d850882233\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_749f92721abc8a389255a48e6bc4f467c7c672e5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\etossell8259\.android\build-cache\ed54e2709b116d10e8ca0b9ff982cd37bd62cc82\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_89a52b0c9f5e74137ba940882c2230e979b4b54a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\etossell8259\.android\build-cache\ee36f11882607548e0e9776387f295a6da2e4926\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3be84e77e0071c42417c0d9cac0201e00ed685ea\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\PROG3210\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_4801e32a9f2b74993b66ef00c53b317b6b0effc3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\etossell8259\.android\build-cache\512dcf42081cc03bc71dbe2454c5c23b637aae48\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_be6cbceeee258ab5abaaa7b1d4ff1c7bc2983b1d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\PROG3210\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee83517db2966b82b3ca6a3691fee9d41d0de021">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4e43c649cdaf7500823711697e920f89581c86ad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\etossell8259\.android\build-cache\19bfc2607cd045cbb37a0e51d01422b999aa8a83\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0c3ddb6020e4bf6725542491553fa5ad744365bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\etossell8259\.android\build-cache\e745e79da82fb70b687534b9fc94fd6704776da2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_90f351a6723dbc26d3d4253287af3d95e9feadbb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\etossell8259\.android\build-cache\0964f0a5882a520c3529b87f14b0fbe361abcff4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_37d1dc1c56711841338a64690159712f89a15a74\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\etossell8259\.android\build-cache\43a1ce9226b51fc45b5438187d2b675373badf39\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1770935963955a4b3c8f0b7ed2a3f08986b96ba0\classes.dex" />
     </item>
 
 </items>

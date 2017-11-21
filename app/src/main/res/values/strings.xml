@@ -26,4 +26,10 @@
     <string name="gender">Gender :</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+    <string name="selectPlan">Select a plan :</string>
+    <string name="hardCutPlan">Hard Cut :</string>
+    <string name="cutPlan">Light Cut :</string>
+    <string name="maintenancePlan">Maintenance :</string>
+    <string name="cleanBulkPlan">Clean Bulk :</string>
+    <string name="hardBulkPlan">Hard Bulk :</string>
 </resources>

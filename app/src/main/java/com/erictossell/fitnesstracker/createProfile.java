@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.content.Intent;
 
 
 import org.w3c.dom.Text;
@@ -92,7 +93,10 @@ public class createProfile extends AppCompatActivity {
                 Integer progress = activitySeekBar.getProgress();
                 activity = Double.parseDouble(progress.toString());
                 calories = calculateCalories(age, feet, inches, weight, goalWeight, activity, gender);
-                caloriesTextView.setText(calories.toString());
+
+                Intent intent = new Intent(getBaseContext(), macroPlans.class);
+                intent.putExtra("maintenanceCalories", calories);
+                startActivity(intent);
             }
         });
 
