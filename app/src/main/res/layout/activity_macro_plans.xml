@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="@color/black_overlay"
             android:layout_span="1"
@@ -22,11 +22,14 @@
         android:id="@+id/hardCut"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="25dp">
+        android:background="@color/black_overlay"
+        android:padding="25dp"
+        android:clickable="true">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
+
             android:text="@string/hardCutPlan"
             />
         <TextView
@@ -45,13 +48,14 @@
 
             android:text="P/C/F"
             />
-
     </TableRow>
     <TableRow
         android:id="@+id/cut"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="25dp">
+        android:padding="25dp"
+        android:clickable="true">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -78,7 +82,8 @@
         android:id="@+id/maintenance"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="25dp" >
+        android:padding="25dp"
+        android:clickable="true">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -106,7 +111,8 @@
         android:id="@+id/cleanBulk"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="25dp">
+        android:padding="25dp"
+        android:clickable="true">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -133,7 +139,9 @@
         android:id="@+id/hardBulk"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="25dp">
+        android:padding="25dp"
+        android:clickable="true">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -166,6 +174,7 @@
             android:layout_span="3"
             android:text="Select"
             >
+
 
         </Button>
     </TableRow>

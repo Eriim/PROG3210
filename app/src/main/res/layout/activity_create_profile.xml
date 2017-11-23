@@ -178,10 +178,4 @@
             android:layout_gravity="center"
             android:text=""             />
     </TableRow>
-
-
-
-
-
-
 </TableLayout>

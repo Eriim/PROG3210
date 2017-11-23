@@ -2,6 +2,7 @@ package com.erictossell.fitnesstracker;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TableRow;
 import android.widget.TextView;
 import java.text.DecimalFormat;
@@ -58,6 +59,11 @@ public class macroPlans extends AppCompatActivity {
         cleanBulkCaloriesTextView.setText(formatter.format(cleanBulkCalories));
         hardBulkCaloriesTextView.setText(formatter.format(hardBulkCalories));
 
+        hardCut.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+            }
+        });
 
 
     }
