@@ -4,14 +4,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TableRow;
 import android.widget.TextView;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class macroPlans extends AppCompatActivity {
 
-    private Integer maintenanceCalories;
-    private Integer hardCutCalories;
-    private Integer cutCalories;
-    private Integer cleanBulkCalories;
-    private Integer hardBulkCalories;
+    private Double maintenanceCalories;
+    private Double hardCutCalories;
+    private Double cutCalories;
+    private Double cleanBulkCalories;
+    private Double hardBulkCalories;
 
     private TableRow hardCut;
     private TableRow cut;
@@ -25,13 +27,13 @@ public class macroPlans extends AppCompatActivity {
     private TextView hardBulkCaloriesTextView;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_macro_plans);
 
-        maintenanceCalories = getIntent().getIntExtra("maintenanceCalories", 0);
+
+        maintenanceCalories = getIntent().getDoubleExtra("maintenanceCalories", 0.00);
 
         hardCut = (TableRow) findViewById(R.id.hardCut);
         cut = (TableRow) findViewById(R.id.cut);
@@ -44,16 +46,17 @@ public class macroPlans extends AppCompatActivity {
         cleanBulkCaloriesTextView = (TextView) findViewById(R.id.cleanBulkCalories);
         hardBulkCaloriesTextView = (TextView) findViewById(R.id.hardBulkCalories);
 
+        DecimalFormat formatter = new DecimalFormat("0");
         hardCutCalories = maintenanceCalories - 1000;
-        cutCalories = maintenanceCalories -500;
+        cutCalories = maintenanceCalories - 500;
         cleanBulkCalories = maintenanceCalories + 500;
         hardBulkCalories = maintenanceCalories + 1000;
 
-        hardCutCaloriesTextView.setText(hardCutCalories.toString());
-        cutCaloriesTextView.setText(cutCalories.toString());
-        maintenanceCaloriesTextView.setText(maintenanceCalories.toString());
-        cleanBulkCaloriesTextView.setText(cleanBulkCalories.toString());
-        hardBulkCaloriesTextView.setText(hardBulkCalories.toString());
+        hardCutCaloriesTextView.setText(formatter.format(hardCutCalories));
+        cutCaloriesTextView.setText(formatter.format(cutCalories));
+        maintenanceCaloriesTextView.setText(formatter.format(maintenanceCalories));
+        cleanBulkCaloriesTextView.setText(formatter.format(cleanBulkCalories));
+        hardBulkCaloriesTextView.setText(formatter.format(hardBulkCalories));
 
 
 

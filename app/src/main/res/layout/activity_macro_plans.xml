@@ -26,13 +26,24 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.3"
             android:text="@string/hardCutPlan"
             />
         <TextView
             android:id="@+id/hardCutCalories"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.3"
+
             android:text=""
+            />
+        <TextView
+            android:id="@+id/hardCutMacros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+
+            android:text="P/C/F"
             />
 
     </TableRow>
@@ -44,16 +55,24 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.3"
             android:text="@string/cutPlan"
             />
         <TextView
             android:id="@+id/cutCalories"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.3"
             android:text=""
             />
+        <TextView
+            android:id="@+id/cutMacros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
 
-
+            android:text="P/C/F"
+            />
     </TableRow>
     <TableRow
         android:id="@+id/maintenance"
@@ -63,13 +82,23 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.3"
             android:text="@string/maintenancePlan"
             />
         <TextView
             android:id="@+id/maintenanceCalories"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.3"
             android:text=""
+            />
+        <TextView
+            android:id="@+id/maintenacnceMacros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+
+            android:text="P/C/F"
             />
 
     </TableRow>
@@ -81,13 +110,22 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.3"
             android:text="@string/cleanBulkPlan"
             />
         <TextView
             android:id="@+id/cleanBulkCalories"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.3"
             android:text=""
+            />
+        <TextView
+            android:id="@+id/cleanBulkMacros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:text="P/C/F"
             />
 
     </TableRow>
@@ -99,15 +137,37 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.3"
             android:text="@string/hardBulkPlan"
             />
         <TextView
             android:id="@+id/hardBulkCalories"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.3"
             android:text=""
             />
+        <TextView
+            android:id="@+id/hardBulkMacros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:text="P/C/F"
+            />
 
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/selectPlanButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_span="3"
+            android:text="Select"
+            >
+
+        </Button>
     </TableRow>
 
 </TableLayout>

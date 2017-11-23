@@ -127,23 +127,11 @@
             android:ems="10"
             android:inputType="number"
             android:text="" />
-    </TableRow>
-    <TableRow>
         <TextView
-            android:id="@+id/goalWeightTextView"
+            android:id="@+id/poundsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="1"
-            android:layout_gravity="center"
-            android:text="@string/goalWeight" />
-        <EditText
-            android:id="@+id/goalWeightEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_span="4"
-            android:ems="10"
-            android:inputType="number"
-            android:text="" />
+            android:text="@string/pounds" />
     </TableRow>
     <TableRow>
         <TextView

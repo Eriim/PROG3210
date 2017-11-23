@@ -23,7 +23,6 @@ public class createProfile extends AppCompatActivity {
     private EditText feetEditText;
     private EditText inchesEditText;
     private EditText weightEditText;
-    private EditText goalWeightEditText;
     private SeekBar activitySeekBar;
     private Button calculateButton;
     private RadioButton maleRadioButton;
@@ -35,6 +34,7 @@ public class createProfile extends AppCompatActivity {
     private Double weight;
     private Double goalWeight;
     private Double calories;
+    private Integer caloriesInt;
     private String name;
     private String gender;
     private Double activity;
@@ -53,7 +53,6 @@ public class createProfile extends AppCompatActivity {
         feetEditText = (EditText) findViewById(R.id.feetEditText);
         inchesEditText = (EditText) findViewById(R.id.inchesEditText);
         weightEditText = (EditText) findViewById(R.id.weightEditText);
-        goalWeightEditText = (EditText) findViewById(R.id.goalWeightEditText);
         ageEditText = (EditText) findViewById(R.id.ageEditText);
         activityLevelTextView = (TextView) findViewById(R.id.activityLevelTextView);
         activitySeekBar = (SeekBar) findViewById(R.id.activitySeekBar);
@@ -89,19 +88,21 @@ public class createProfile extends AppCompatActivity {
                 feet = Double.parseDouble(feetEditText.getText().toString());
                 inches = Double.parseDouble(inchesEditText.getText().toString());
                 weight = Double.parseDouble(weightEditText.getText().toString());
-                goalWeight = Double.parseDouble(goalWeightEditText.getText().toString());
+
                 Integer progress = activitySeekBar.getProgress();
                 activity = Double.parseDouble(progress.toString());
-                calories = calculateCalories(age, feet, inches, weight, goalWeight, activity, gender);
+                calories = calculateCalories(age, feet, inches, weight, activity, gender);
 
-                Intent intent = new Intent(getBaseContext(), macroPlans.class);
+
+
+                Intent intent = new Intent(createProfile.this, macroPlans.class);
                 intent.putExtra("maintenanceCalories", calories);
                 startActivity(intent);
             }
         });
 
     }
-    public Double calculateCalories(Double age, Double feet, Double inches, Double weight, Double goalWeight, Double activity, String gender){
+    public Double calculateCalories(Double age, Double feet, Double inches, Double weight, Double activity, String gender){
         Double calories = 0.0;
         if (gender.equals("male")){
             Double height = (feet*12) + inches;
