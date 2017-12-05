@@ -48,21 +48,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\etossell8259\.android\build-cache\36712902eaac298c5e5e94b458950ec04c32aaf7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_426de5352b52e7f193fa2d882718434b528f3f49\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\etossell8259\.android\build-cache\19bfc2607cd045cbb37a0e51d01422b999aa8a83\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
         <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0c3ddb6020e4bf6725542491553fa5ad744365bb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\etossell8259\.android\build-cache\79bcb23388ecce96d7b1c146336e315d39ccdc46\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_29d76e9f8d293064c8b72eaaf4b95d4e4c60d959\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -106,7 +106,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="023b6ba31ec95d292ecb5122676ec7b11f5e2b72">
+        sha1="e68bbf1445171776c6155708b1f533efc518bc5b">
         <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4e43c649cdaf7500823711697e920f89581c86ad\classes.dex" />
     </item>
     <item

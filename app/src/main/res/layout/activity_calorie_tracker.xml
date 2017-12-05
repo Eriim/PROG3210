@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.erictossell.fitnesstracker.calorieTracker">
+
+    <TextView
+        android:id="@+id/fatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/proteinProgressBar"
+        android:layout_centerHorizontal="true"
+        android:text="Fat" />
+
+    <TextView
+        android:id="@+id/proteinTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Protein"
+        android:layout_below="@+id/caloriesProgressBar"
+        android:layout_alignLeft="@+id/currentCaloriesTextView"
+        android:layout_alignStart="@+id/currentCaloriesTextView" />
+
+    <TextView
+        android:id="@+id/carbTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carbohydrates"
+        android:layout_below="@+id/fatProgressBar"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/caloriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/caloriesProgressBar"
+        android:layout_centerHorizontal="true"
+        android:text="Daily Calories" />
+
+    <TextView
+        android:id="@+id/currentCaloriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:text="0"
+        android:layout_below="@+id/carbProgressBar"
+        android:layout_toLeftOf="@+id/backslash"
+        android:layout_toStartOf="@+id/backslash"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/totalCaloriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@+id/currentCaloriesTextView"
+        android:layout_alignBottom="@+id/currentCaloriesTextView"
+        android:layout_toRightOf="@+id/backslash"
+        android:layout_toEndOf="@+id/backslash"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
+
+    <ProgressBar
+        android:id="@+id/caloriesProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="54dp"
+        android:progress="0"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        android:id="@+id/proteinProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:progress="0"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_below="@+id/caloriesProgressBar"
+        android:layout_alignLeft="@+id/caloriesProgressBar"
+        android:layout_alignStart="@+id/caloriesProgressBar" />
+
+    <ProgressBar
+        android:id="@+id/fatProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/proteinProgressBar"
+        android:layout_alignStart="@+id/proteinProgressBar"
+        android:layout_below="@+id/proteinProgressBar"
+        android:progress="0"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ProgressBar
+        android:id="@+id/carbProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:progress="0"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_below="@+id/fatProgressBar"
+        android:layout_alignLeft="@+id/fatProgressBar"
+        android:layout_alignStart="@+id/fatProgressBar" />
+
+    <EditText
+        android:id="@+id/addCalroiesEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        android:layout_below="@+id/currentCaloriesTextView"
+        android:layout_alignLeft="@+id/caloriesProgressBar"
+        android:layout_alignStart="@+id/caloriesProgressBar"
+        android:layout_toStartOf="@+id/totalCaloriesTextView"
+        android:layout_alignRight="@+id/backslash"
+        android:layout_alignEnd="@+id/backslash" />
+
+    <Button
+        android:id="@+id/addCaloriesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Calories"
+        android:layout_alignTop="@+id/addCalroiesEditText"
+        android:layout_alignRight="@+id/caloriesProgressBar"
+        android:layout_alignEnd="@+id/caloriesProgressBar" />
+
+    <TextView
+        android:id="@+id/backslash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/totalCaloriesTextView"
+        android:layout_alignBottom="@+id/totalCaloriesTextView"
+        android:layout_centerHorizontal="true"
+        android:text="/"
+        tools:text="/" />
+
+
+
+</RelativeLayout>

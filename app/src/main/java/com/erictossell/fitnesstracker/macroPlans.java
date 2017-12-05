@@ -1,8 +1,10 @@
 package com.erictossell.fitnesstracker;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import java.text.DecimalFormat;
@@ -16,6 +18,7 @@ public class macroPlans extends AppCompatActivity {
     private Double cleanBulkCalories;
     private Double hardBulkCalories;
 
+    private TableLayout tableLayout;
     private TableRow hardCut;
     private TableRow cut;
     private TableRow maintenance;
@@ -36,6 +39,7 @@ public class macroPlans extends AppCompatActivity {
 
         maintenanceCalories = getIntent().getDoubleExtra("maintenanceCalories", 0.00);
 
+        tableLayout = (TableLayout) findViewById(R.id.tableLayout);
         hardCut = (TableRow) findViewById(R.id.hardCut);
         cut = (TableRow) findViewById(R.id.cut);
         maintenance = (TableRow) findViewById(R.id.maintenance);
@@ -61,9 +65,40 @@ public class macroPlans extends AppCompatActivity {
 
         hardCut.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-
+                Intent intent = new Intent(macroPlans.this, calorieTracker.class);
+                intent.putExtra("calories", hardCutCalories);
+                startActivity(intent);
             }
         });
+        cut.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(macroPlans.this, calorieTracker.class);
+                intent.putExtra("calories", cutCalories);
+                startActivity(intent);
+            }
+        });
+        maintenance.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(macroPlans.this, calorieTracker.class);
+                intent.putExtra("calories", maintenanceCalories);
+                startActivity(intent);
+            }
+        });
+        cleanBulk.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(macroPlans.this, calorieTracker.class);
+                intent.putExtra("calories", cleanBulkCalories);
+                startActivity(intent);
+            }
+        });
+        hardBulk.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(macroPlans.this, calorieTracker.class);
+                intent.putExtra("calories", hardBulkCalories);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

@@ -24,7 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".macroPlans"></activity>
+        <activity android:name=".macroPlans" />
+        <activity android:name=".calorieTracker"></activity>
     </application>
 
 </manifest>
