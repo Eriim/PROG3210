@@ -4,12 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
+import android.content.Intent;
 
 public class calorieTracker extends AppCompatActivity {
 
     private ProgressBar dailyCaloriesProgressBar;
     private EditText addCaloriesEditText;
     private Button addCaloriesButton;
+    private Button addMealButton;
     private TextView totalCaloriesTextView;
     private TextView currentCaloriesTextView;
 
@@ -29,8 +31,8 @@ public class calorieTracker extends AppCompatActivity {
 
         addCaloriesEditText = (EditText) findViewById(R.id.addCalroiesEditText);
         addCaloriesButton = (Button) findViewById(R.id.addCaloriesButton);
-
-        totalCaloriesTextView = (TextView) findViewById(R.id.totalCaloriesTextView);
+        addMealButton = (Button) findViewById(R.id.addMealButton);
+                totalCaloriesTextView = (TextView) findViewById(R.id.totalCaloriesTextView);
         totalCaloriesTextView.setText(dailyCalories.toString());
         currentCaloriesTextView = (TextView) findViewById(R.id.currentCaloriesTextView);
         currentCalories = dailyCaloriesProgressBar.getProgress();
@@ -43,8 +45,13 @@ public class calorieTracker extends AppCompatActivity {
                 currentCalories = dailyCaloriesProgressBar.getProgress();
                 currentCaloriesTextView.setText(currentCalories.toString());
             }
-
         }
         ));
+        addMealButton.setOnClickListener((new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(calorieTracker.this, addMeal.class);
+                startActivity(intent);
+            }
+        }));
     }
 }

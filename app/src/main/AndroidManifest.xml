@@ -25,7 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".macroPlans" />
-        <activity android:name=".calorieTracker"></activity>
+        <activity android:name=".calorieTracker" />
+        <activity android:name=".addMeal"></activity>
     </application>
 
 </manifest>

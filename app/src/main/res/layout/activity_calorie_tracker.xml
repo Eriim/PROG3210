@@ -146,6 +146,15 @@
         android:text="/"
         tools:text="/" />
 
+    <Button
+        android:id="@+id/addMealButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/caloriesTextView"
+        android:layout_alignRight="@+id/caloriesTextView"
+        android:layout_below="@+id/addCaloriesButton"
+        android:layout_marginTop="25dp"
+        android:text="Add Meal" />
 
 
 </RelativeLayout>
