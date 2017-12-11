@@ -10,8 +10,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        android:theme="@style/FitnessTracker">
+        <activity android:name=".MainActivity"
+            android:theme="@style/FitnessTracker" />
         <activity android:name=".signUp" />
         <activity android:name=".activity_log_in" />
         <activity android:name=".createProfile" />
@@ -26,9 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".macroPlans" />
-        <activity android:name=".calorieTracker" />
-        <activity android:name=".addMeal" />
+        <activity android:name=".macroPlans"
+            android:theme="@style/FitnessTracker"/>
+        <activity android:name=".calorieTracker"
+            android:theme="@style/FitnessTracker"/>
+        <activity android:name=".addMeal"
+            android:theme="@style/FitnessTracker"/>
     </application>
 
 </manifest>
