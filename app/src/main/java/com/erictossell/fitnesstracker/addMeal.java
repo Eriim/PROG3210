@@ -6,7 +6,11 @@ import android.view.View;
 import android.content.Intent;
 import android.widget.*;
 
+import com.erictossell.fitnesstracker.Database.AppDatabase;
+import com.erictossell.fitnesstracker.Database.Meal;
+
 public class addMeal extends AppCompatActivity {
+    private AppDatabase database;
     private EditText mealNameEditText;
     private EditText caloriesEditText;
     private EditText proteinEditText;
@@ -20,13 +24,14 @@ public class addMeal extends AppCompatActivity {
     private Integer protein;
     private Integer fat;
     private Integer carbs;
-    private String servingSize;
+    private String servingSize = "0";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_meal);
+        database = AppDatabase.getDatabase(getApplicationContext());
 
         mealNameEditText = (EditText) findViewById(R.id.mealNameEditText);
         caloriesEditText = (EditText) findViewById(R.id.caloriesEditText);
@@ -38,11 +43,14 @@ public class addMeal extends AppCompatActivity {
 
         addMealButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
+
                 mealName = mealNameEditText.getText().toString();
                 calories = Integer.parseInt(caloriesEditText.getText().toString());
                 protein = Integer.parseInt(proteinEditText.getText().toString());
                 fat = Integer.parseInt(fatEditText.getText().toString());
                 carbs = Integer.parseInt(carbEditText.getText().toString());
+                Meal meal = new Meal(mealName, calories, protein, fat, carbs, servingSize);
+                database.mealDao().addMeal(meal);
                 Intent intent = new Intent(addMeal.this, calorieTracker.class);
                 startActivity(intent);
 

@@ -112,30 +112,6 @@
         android:layout_alignLeft="@+id/fatProgressBar"
         android:layout_alignStart="@+id/fatProgressBar" />
 
-    <EditText
-        android:id="@+id/addCalroiesEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text=""
-        android:layout_below="@+id/currentCaloriesTextView"
-        android:layout_alignLeft="@+id/caloriesProgressBar"
-        android:layout_alignStart="@+id/caloriesProgressBar"
-        android:layout_toStartOf="@+id/totalCaloriesTextView"
-        android:layout_alignRight="@+id/backslash"
-        android:layout_alignEnd="@+id/backslash" />
-
-    <Button
-        android:id="@+id/addCaloriesButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Calories"
-        android:layout_alignTop="@+id/addCalroiesEditText"
-        android:layout_alignRight="@+id/caloriesProgressBar"
-        android:layout_alignEnd="@+id/caloriesProgressBar" />
-
     <TextView
         android:id="@+id/backslash"
         android:layout_width="wrap_content"
@@ -150,11 +126,29 @@
         android:id="@+id/addMealButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/caloriesTextView"
-        android:layout_alignRight="@+id/caloriesTextView"
-        android:layout_below="@+id/addCaloriesButton"
-        android:layout_marginTop="25dp"
+        android:layout_alignLeft="@+id/carbTextView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/carbTextView"
+        android:layout_marginBottom="16dp"
         android:text="Add Meal" />
+
+    <Spinner
+        android:id="@+id/mealSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentCaloriesTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/eatMealButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/caloriesTextView"
+        android:layout_alignStart="@+id/caloriesTextView"
+        android:layout_below="@+id/mealSpinner"
+        android:layout_marginTop="15dp"
+        android:text="Eat Meal" />
 
 
 </RelativeLayout>

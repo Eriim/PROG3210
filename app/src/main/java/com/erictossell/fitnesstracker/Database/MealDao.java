@@ -14,12 +14,15 @@ public interface MealDao {
     @Query("select * from meal")
     public List<Meal> getAllMeal();
 
-    @Query("select * from meal where id = :mealId")
-    public List<Meal> getMeal(int mealId);
+    @Query("select name from meal")
+    public List<String> getAllMeals();
+
+    @Query("select * from meal where name = :mealName")
+    public Meal getMeal(String mealName);
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     void updateMeal(Meal meal);
 
-    @Query("delete from meal")
-    void removeAllMeal();
+    @Query("delete from meal where id = :mealId")
+    void removeAllMeal(int mealId);
 }
