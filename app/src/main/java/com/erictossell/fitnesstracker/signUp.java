@@ -7,7 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.erictossell.fitnesstracker.Database.AppDatabase;
+import com.erictossell.fitnesstracker.Database.User;
+
 public class signUp extends AppCompatActivity {
+    private AppDatabase database;
     private EditText emailEditText;
     private EditText passwordEditText;
     private EditText confirmPasswordEditText;
@@ -20,6 +24,8 @@ public class signUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        database = AppDatabase.getDatabase(getApplicationContext());
+
 
         emailEditText = (EditText) findViewById(R.id.usernameEditText);
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
@@ -37,11 +43,13 @@ public class signUp extends AppCompatActivity {
     }
 
     public void confirmRegistration(String email, String password, String confirmPassword) {
-            if (password.equals(confirmPassword)){
+        if (password.equals(confirmPassword)){
+            User user = new User(email, password);
 
-                Intent intent = new Intent(getBaseContext(), createProfile.class);
-                intent.putExtra("username", email);
-                startActivity(intent);
-            }
+            database.userDao().addUser(user);
+            Intent intent = new Intent(getBaseContext(), createProfile.class);
+            intent.putExtra("username", email);
+            startActivity(intent);
+        }
     }
 }

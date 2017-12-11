@@ -14,8 +14,8 @@ public interface UserDao {
     @Query("select * from user")
     public List<User> getAllUser();
 
-    @Query("select * from user where id = :userId")
-    public List<User> getUser(long userId);
+    @Query("select * from user where email = :input")
+    public User getUser(String input);
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     void updateUser(User user);

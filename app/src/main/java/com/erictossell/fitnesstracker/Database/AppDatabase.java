@@ -7,16 +7,17 @@ import android.content.Context;
 
 
 @Database(entities={User.class, Meal.class},
-version = 18, exportSchema = false)
+version = 19, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase{
     private static AppDatabase INSTANCE;
 
     public abstract UserDao userDao();
     public abstract MealDao mealDao();
+ //   public abstract WeightDao weightDao();
 
     public static AppDatabase getDatabase(Context context) {
         if (INSTANCE == null) {
-            INSTANCE = Room.databaseBuilder(context, AppDatabase.class, "userdatabase")
+            INSTANCE = Room.databaseBuilder(context, AppDatabase.class, "fitnesssdatabase")
                     .allowMainThreadQueries()
                     .fallbackToDestructiveMigration()
                     .build();

@@ -11,11 +11,11 @@ public interface MealDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void addMeal(Meal meal);
 
-    @Query("select * from meal")
-    public List<Meal> getAllMeal();
+    @Query("select name from meal")
+    public List<String> getAllMeals();
 
-    @Query("select * from meal where id = :mealId")
-    public List<Meal> getMeal(int mealId);
+    @Query("select * from meal where name = :mealName")
+    public Meal getMeal(String mealName);
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     void updateMeal(Meal meal);

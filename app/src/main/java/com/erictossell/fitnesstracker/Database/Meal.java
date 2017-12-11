@@ -6,8 +6,8 @@ import android.arch.persistence.room.PrimaryKey;
  */
 @Entity
 public class Meal {
-    @PrimaryKey
-    public final Integer id;
+    @PrimaryKey(autoGenerate = true)
+    long id;
     private String name;
     private Integer calories;
     private Integer fat;
@@ -15,8 +15,8 @@ public class Meal {
     private Integer carbohydrates;
     private String servingSize;
 
-    public Meal(Integer id, String name, Integer calories, Integer fat, Integer protein, Integer carbohydrates, String servingSize) {
-        this.id = id;
+    public Meal(String name, Integer calories, Integer fat, Integer protein, Integer carbohydrates, String servingSize) {
+
         this.name = name;
         this.calories = calories;
         this.fat = fat;
