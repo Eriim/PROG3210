@@ -18,5 +18,5 @@ public interface WeightDao {
     public List<Weight> getAllWeight();
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
-    void updateMeal(Meal meal);
+    void updateWeight(Weight weight);
 }
