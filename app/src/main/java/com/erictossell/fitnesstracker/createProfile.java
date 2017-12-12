@@ -81,7 +81,7 @@ public class createProfile extends AppCompatActivity {
                 else {
                     gender = "female";
                 }
-                name = nameEditText.getText().toString();
+
                 age = Double.parseDouble(ageEditText.getText().toString());
                 feet = Double.parseDouble(feetEditText.getText().toString());
                 inches = Double.parseDouble(inchesEditText.getText().toString());

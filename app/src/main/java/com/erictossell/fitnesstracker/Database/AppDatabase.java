@@ -10,7 +10,7 @@ import java.util.Date;
 
 
 @Database(entities={User.class, Meal.class, Weight.class, UserInfo.class},
-version = 21, exportSchema = false)
+version = 22, exportSchema = false)
 @TypeConverters({DateConverter.class})
 public abstract class AppDatabase extends RoomDatabase{
     private static AppDatabase INSTANCE;

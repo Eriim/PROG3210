@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\ee36f11882607548e0e9776387f295a6da2e4926\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_3be84e77e0071c42417c0d9cac0201e00ed685ea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\f3f3df8c53c0861b9c712cea834c9c19c4ead2b0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_ac559251610605cd67dd4ba2cece29b91df41c27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.2\2bf96b7aa8b611c177d329452af1dc933e14501c\commons-cli-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\commons-cli-1.2_5cd0b64c31f90b8213eab6b553a0b452771962f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\109f6789b5961ebb86e9e1765a5bb68eb40d2afc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="957da46db3106b343ced0ea9753432a5c0e29459">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_ec8077de75de331693c95ac997a3aee8b57d57a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.2.0\959c454243581fdf730abfd4f4745441724bcf2c\okhttp-2.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="959c454243581fdf730abfd4f4745441724bcf2c">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\okhttp-2.2.0_a194b8c9b4740228a049f61705aff0e53904f725.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.gradle\caches\modules-2\files-2.1\com.android.support.constraint\constraint-layout-solver\1.0.2\b9cd8fc6bd15cb915735d34535db30ece0c44603\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_9cabce3b8cc71dd0ecc8af36ba61409695c02db4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\1fa930fa95cbfc5ad3d75c86dbd5e3cfaa3edf2b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7fe7e7a0328a07dbf30d0e725796293e76282135">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_aa0907ccc82bd210964084b0603e5be4cfeba802.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\common-1.0.0_3011a7cb2ad18a1361688218761e32872a4f6f5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.2.0\c0b52915a48fa91b1b94a28d4a2997bac5f524df\okio-1.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c0b52915a48fa91b1b94a28d4a2997bac5f524df">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\okio-1.2.0_f85d3bfab72b2b2407266b6a5550ed5669d128bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\37625fa8e7198fc6abcfb99924da530353024c5a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_76d7ab818e96fc279da33660e5f1fdfea410e515.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\298f6b7c8fbe55dd51b78ad0f250c74c786c6718\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="89234dc34ba02fbf2bfbf90a9c45325731c46bf6">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_882ef0dd1fe3caff166e8c9503709647d68a5b8d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\26.1.0\814258103cf26a15fcc26ecce35f5b7d24b73f8\support-annotations-26.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\support-annotations-26.1.0_84f8c93b1315ef30fdaa689db4225051779afd44.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\3f3b1abc56e26453b096eed215dd0185cd9348af\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_7219fe34dcca28469408e8b868d3383142aea993.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\007a5e2b998e32d63d28a7a456e69732ae985315\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_0050f46fe1e936501f946923d14e741ab5cb6f33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\fe9224aa24c6809a754f91b0c5b7e3ab6c80e8ff\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_41c0313b47b764a0f3dcc610f1384b3eca17835d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\e312f6c66801b5af165123b888215bc08d1353d4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7cc5473b9cf4ea159a263cd477fb3ecb2987b96">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_7cedb224d87571a952023060a543da92f0e567a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\c927b647e0b25d988f87893e844f6c269a9e841b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="568f8a0b5899b8b724863d4247d8c42e9acc80dc">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_ff8c0c368ee1ca8a5e8ea624fc7b4638738cb1a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho-okhttp\1.1.1\1732524bc9a7c660032c73133ce27749a64ba456\stetho-okhttp-1.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1732524bc9a7c660032c73133ce27749a64ba456">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\stetho-okhttp-1.1.1_246f102f8b255cd9205c484e2064c9871f82f25f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\5bec0fbb7e3a2cb3759f47743808346bbe2f4d3c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_46c7b835a4752f514925dea5771580dd3af220fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\59b32ace49a1a2eed0f1c86493642da238abca44\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_e1a3764631ac6448de22ad2eebcca7863e9cf886.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\PROG3210\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_4801e32a9f2b74993b66ef00c53b317b6b0effc3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\PROG3210\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="47d525a1c6d4984c2061026f99f0ec1f0f144751">
+        <dex dex="G:\PROG3210\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4e43c649cdaf7500823711697e920f89581c86ad\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.3\7d7f60c4783872861222166f6164215f8951c7b1\common-1.0.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7d7f60c4783872861222166f6164215f8951c7b1">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\common-1.0.3_3d22cf73e4ce4d64ede04d3b9cb0ba8f8855a85e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\9256abb89722faa0a677176eb328a9b380d0c787\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_8ad33cd626af16d811a589aaf00a41b34beb6d05.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\854426a08d95832378a9805fb566604b148d9388\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_da21f0f82757f69a492c3f4d1e0f77dcccaa8ac4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.android\build-cache\ec6b532d409585cc7bdf3df165f92cbb890fd326\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78120c3d8c142b783fc3a6f456dbfd30b3232e8e">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\classes_916ffad913d7bde77efd6afedd4c3e325d1d30f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho\1.1.1\ab1142c5adfa474e7494cba19fd9fc6e73207960\stetho-1.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ab1142c5adfa474e7494cba19fd9fc6e73207960">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\stetho-1.1.1_b9740c6bd754348b5d481fcaeffaffcf8a80c458.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.gradle\caches\modules-2\files-2.1\android.arch.persistence.room\common\1.0.0-rc1\6d39ccad7bcc6647ef820bf940e3b18774d560a4\common-1.0.0-rc1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6d39ccad7bcc6647ef820bf940e3b18774d560a4">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\common-1.0.0-rc1_706f5c95c66ac422a7664fcd4e1211488737fe06.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\etossell8259\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="G:\PROG3210\app\build\intermediates\pre-dexed\debug\jsr305-2.0.1_15faf7c5ecf4fdb668797b97a03afc08ee85bcb8.jar" />
+    </item>
+
+</items>

@@ -127,7 +127,7 @@
         android:id="@+id/addMealButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="29dp"
         android:text="Add Meal"
         android:layout_below="@+id/eatMealButton"
         android:layout_alignRight="@+id/carbTextView"
@@ -144,11 +144,11 @@
         android:id="@+id/eatMealButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/caloriesTextView"
-        android:layout_alignStart="@+id/caloriesTextView"
+        android:layout_marginTop="17dp"
+        android:text="Eat Meal"
         android:layout_below="@+id/mealSpinner"
-        android:layout_marginTop="15dp"
-        android:text="Eat Meal" />
+        android:layout_alignRight="@+id/addMealButton"
+        android:layout_alignEnd="@+id/addMealButton" />
 
 
 </RelativeLayout>
