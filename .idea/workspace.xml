@@ -9,22 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bca26f34-4994-4e5d-82b5-980837ae2679" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/Database/AppDatabase.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/Database/AppDatabase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/Util.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/Util.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/calorieTracker.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/calorieTracker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/macroPlans.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/macroPlans.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/signUp.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/signUp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/Database/Macro.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/Database/MacroPlan.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/Database/MacroDao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/erictossell/fitnesstracker/Database/MacroPlanDao.java" />
-    </list>
+    <list default="true" id="bca26f34-4994-4e5d-82b5-980837ae2679" name="Default" comment="" />
     <ignored path="PROG3210.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
