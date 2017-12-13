@@ -21,8 +21,7 @@
         android:layout_height="wrap_content"
         android:text="Protein"
         android:layout_below="@+id/caloriesProgressBar"
-        android:layout_alignLeft="@+id/currentCaloriesTextView"
-        android:layout_alignStart="@+id/currentCaloriesTextView" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/carbTextView"
@@ -38,31 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/caloriesProgressBar"
         android:layout_centerHorizontal="true"
-        android:text="Daily Calories" />
-
-    <TextView
-        android:id="@+id/currentCaloriesTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
-        android:text="0"
-        android:layout_below="@+id/carbProgressBar"
-        android:layout_toLeftOf="@+id/backslash"
-        android:layout_toStartOf="@+id/backslash"
-        android:layout_marginTop="15dp" />
-
-    <TextView
-        android:id="@+id/totalCaloriesTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:layout_alignBaseline="@+id/currentCaloriesTextView"
-        android:layout_alignBottom="@+id/currentCaloriesTextView"
-        android:layout_toRightOf="@+id/backslash"
-        android:layout_toEndOf="@+id/backslash"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp" />
+        android:text="Calories" />
 
     <ProgressBar
         android:id="@+id/caloriesProgressBar"
@@ -70,6 +45,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="54dp"
+        android:padding="25dp"
         android:progress="0"
         tools:layout_editor_absoluteX="138dp"
         tools:layout_editor_absoluteY="16dp"
@@ -82,6 +58,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:progress="0"
+        android:padding="25dp"
         tools:layout_editor_absoluteX="138dp"
         tools:layout_editor_absoluteY="16dp"
         android:layout_below="@+id/caloriesProgressBar"
@@ -93,6 +70,7 @@
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:padding="25dp"
         android:layout_alignLeft="@+id/proteinProgressBar"
         android:layout_alignStart="@+id/proteinProgressBar"
         android:layout_below="@+id/proteinProgressBar"
@@ -105,6 +83,7 @@
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:padding="25dp"
         android:progress="0"
         tools:layout_editor_absoluteX="138dp"
         tools:layout_editor_absoluteY="16dp"
@@ -112,16 +91,6 @@
         android:layout_alignLeft="@+id/fatProgressBar"
         android:layout_alignStart="@+id/fatProgressBar" />
 
-
-    <TextView
-        android:id="@+id/backslash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/totalCaloriesTextView"
-        android:layout_alignBottom="@+id/totalCaloriesTextView"
-        android:layout_centerHorizontal="true"
-        android:text="/"
-        tools:text="/" />
 
     <Button
         android:id="@+id/addMealButton"
@@ -136,19 +105,55 @@
         android:id="@+id/mealSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/currentCaloriesTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/carbProgressBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/eatMealButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="21dp"
         android:text="Eat Meal"
         android:layout_below="@+id/mealSpinner"
         android:layout_alignRight="@+id/addMealButton"
         android:layout_alignEnd="@+id/addMealButton" />
+
+    <TextView
+        android:id="@+id/caloriesProgressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/proteinTextView"
+        android:layout_centerHorizontal="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/proteinProgressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fatTextView"
+        android:layout_alignLeft="@+id/caloriesProgressTextView"
+        android:layout_alignStart="@+id/caloriesProgressTextView"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/fatProgressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/carbTextView"
+        android:layout_alignLeft="@+id/proteinProgressTextView"
+        android:layout_alignStart="@+id/proteinProgressTextView"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/carbProgressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_alignBottom="@+id/carbProgressBar"
+        android:layout_alignLeft="@+id/fatProgressTextView"
+        android:layout_alignStart="@+id/fatProgressTextView" />
 
 
 </RelativeLayout>

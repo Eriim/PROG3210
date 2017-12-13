@@ -14,6 +14,9 @@ public interface UserDao {
     @Query("select * from user")
     public List<User> getAllUser();
 
+    @Query("select userId from user where email =:input")
+    public long getUserId(String input);
+
     @Query("select * from user where email = :input")
     public User getUser(String input);
 

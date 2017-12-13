@@ -15,7 +15,7 @@ public class Meal {
     private Integer carbohydrates;
     private String servingSize;
 
-    public Meal(String name, Integer calories, Integer fat, Integer protein, Integer carbohydrates, String servingSize) {
+    public Meal(String name, Integer calories, Integer protein, Integer fat, Integer carbohydrates, String servingSize) {
 
         this.name = name;
         this.calories = calories;

@@ -1,6 +1,8 @@
 package com.erictossell.fitnesstracker;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.erictossell.fitnesstracker.Database.AppDatabase;
+import com.erictossell.fitnesstracker.Database.SaveSharedPreference;
 import com.erictossell.fitnesstracker.Database.User;
 
 public class activity_log_in extends AppCompatActivity {
@@ -45,6 +48,8 @@ public class activity_log_in extends AppCompatActivity {
         else if(user.getPassword().equals(password)){
             Intent intent = new Intent(getBaseContext(), createProfile.class);
             intent.putExtra("username", email);
+            Context context = this;
+            SaveSharedPreference.setUserName(context, email);
             startActivity(intent);
         }
         else {

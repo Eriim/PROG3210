@@ -1,5 +1,8 @@
 package com.erictossell.fitnesstracker;
 
+import com.erictossell.fitnesstracker.Database.Macro;
+
+
 /**
  * Created by etossell8259 on 12/11/2017.
  */
@@ -72,5 +75,58 @@ public class Util {
 
         return calories;
 
+    }
+    public Macro calculateMacro(long id, Double calories, Double weight, int goal) {
+         Macro macro = new Macro();
+
+         double calcCalories;
+         double protein;
+         double fat;
+         double carb;
+        switch (goal){
+        case 1:
+            protein = weight * 1.3;
+            fat = calories*0.111 * 0.3;
+            calcCalories = calories-(protein*4.00)-(fat*9);
+            carb = calcCalories*0.25;
+            macro = new Macro(id, protein, fat, carb, calories);
+
+            break;
+        case 2:
+            protein = weight * 1.1;
+            fat = calories*0.111 * 0.3;
+            calcCalories = calories-(protein*4.00)-(fat*9);
+            carb = calcCalories*0.25;
+            macro = new Macro(id, protein, fat, carb, calories);
+
+            break;
+
+        case 3:
+            protein = weight * 1.0;
+            carb = weight * 1.3;
+            calcCalories = calories-(protein*4.00)-(carb*4);
+            fat = calcCalories*0.111;
+            macro = new Macro(id, protein, fat, carb, calories);
+
+            break;
+        case 4:
+            protein = weight*0.8;
+            fat = calories*0.111 * 0.3;
+            calcCalories = calories -(protein*4)-(fat*9);
+            carb = calcCalories*0.25;
+            macro = new Macro(id, protein, fat, carb, calories);
+
+            break;
+        case 5:
+            protein = weight*0.8;
+            fat = calories*0.111 * 0.3;
+            calcCalories = calories -(protein*4)-(fat*9);
+            carb = calcCalories*0.25;
+            macro = new Macro(id, protein, fat, carb, calories);
+
+            break;
+
+            }
+        return macro;
     }
 }

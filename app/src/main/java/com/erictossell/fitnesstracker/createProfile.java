@@ -94,6 +94,7 @@ public class createProfile extends AppCompatActivity {
                 Intent intent = new Intent(createProfile.this, macroPlans.class);
                 //TODO Pass email to verify user logged in
                 intent.putExtra("maintenanceCalories", calories);
+                intent.putExtra("weight", weight);
                 startActivity(intent);
             }
         });

@@ -5,6 +5,7 @@
     android:id="@+id/tableLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:shrinkColumns="*"
     tools:context="com.erictossell.fitnesstracker.macroPlans">
     <TableRow
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@
             android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="@color/black_overlay"
-            android:layout_span="1"
+            android:layout_span="3"
             android:text="@string/selectPlan"/>
     </TableRow>
     <TableRow
@@ -27,26 +28,24 @@
         android:padding="25dp"
         android:clickable="true">
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
-
             android:text="@string/hardCutPlan"
             />
         <TextView
             android:id="@+id/hardCutCalories"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
-
             android:text=""
             />
         <TextView
             android:id="@+id/hardCutMacros"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
-
+            android:gravity="right"
             android:text="P/C/F"
             />
     </TableRow>
@@ -59,24 +58,24 @@
         android:clickable="true">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:text="@string/cutPlan"
             />
         <TextView
             android:id="@+id/cutCalories"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:text=""
             />
         <TextView
             android:id="@+id/cutMacros"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
-
+            android:gravity="right"
             android:text="P/C/F"
             />
     </TableRow>
@@ -88,24 +87,24 @@
         android:background="@drawable/tablerow"
         android:clickable="true">
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:text="@string/maintenancePlan"
             />
         <TextView
             android:id="@+id/maintenanceCalories"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:text=""
             />
         <TextView
-            android:id="@+id/maintenacnceMacros"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/maintenanceMacros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
-
+            android:gravity="right"
             android:text="P/C/F"
             />
 
@@ -118,23 +117,24 @@
         android:background="@drawable/tablerow"
         android:clickable="true">
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:text="@string/cleanBulkPlan"
             />
         <TextView
             android:id="@+id/cleanBulkCalories"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:text=""
             />
         <TextView
             android:id="@+id/cleanBulkMacros"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
+            android:gravity="right"
             android:text="P/C/F"
             />
 
@@ -148,23 +148,24 @@
         android:clickable="true">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:text="@string/hardBulkPlan"
             />
         <TextView
             android:id="@+id/hardBulkCalories"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:text=""
             />
         <TextView
             android:id="@+id/hardBulkMacros"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
+            android:gravity="right"
             android:text="P/C/F"
             />
     </TableRow>

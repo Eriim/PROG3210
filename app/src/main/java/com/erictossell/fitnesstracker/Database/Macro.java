@@ -15,24 +15,25 @@ import android.arch.persistence.room.PrimaryKey;
                 childColumns = "userId"
         )
 })
-public class UserInfo {
+public class Macro {
     @PrimaryKey(autoGenerate = true)
     long id;
     @ColumnInfo(name="userId")
     private long userId;
-    private int protein;
-    private int fat;
-    private int carb;
-    private int calories;
-    private int height;
+    private Double protein;
+    private Double fat;
+    private Double carb;
+    private Double calories;
 
-    public UserInfo(long userId, int protein, int fat, int carb, int calories, int height){
+    public Macro() {
+
+    }
+    public Macro(long userId, Double protein, Double fat, Double carb, Double calories){
         this.userId = userId;
         this.protein = protein;
         this.fat = fat;
         this.carb = carb;
         this.calories = calories;
-        this.height = height;
     }
 
     public long getUserId() {
@@ -43,43 +44,36 @@ public class UserInfo {
         this.userId = userId;
     }
 
-    public int getProtein() {
+    public Double getProtein() {
         return protein;
     }
 
-    public void setProtein(int protein) {
+    public void setProtein(Double protein) {
         this.protein = protein;
     }
 
-    public int getFat() {
+    public Double getFat() {
         return fat;
     }
 
-    public void setFat(int fat) {
+    public void setFat(Double fat) {
         this.fat = fat;
     }
 
-    public int getCarb() {
+    public Double getCarb() {
         return carb;
     }
 
-    public void setCarb(int carb) {
+    public void setCarb(Double carb) {
         this.carb = carb;
     }
 
-    public int getCalories() {
+    public Double getCalories() {
         return calories;
     }
 
-    public void setCalories(int calories) {
+    public void setCalories(Double calories) {
         this.calories = calories;
     }
 
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
 }
