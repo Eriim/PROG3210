@@ -1,17 +1,18 @@
 package com.erictossell.fitnesstracker;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.*;
 import android.content.Intent;
 
 import com.erictossell.fitnesstracker.Database.AppDatabase;
-import com.erictossell.fitnesstracker.Database.Macro;
+import com.erictossell.fitnesstracker.Database.MacroPlan;
 import com.erictossell.fitnesstracker.Database.Meal;
 import com.erictossell.fitnesstracker.Database.SaveSharedPreference;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -46,18 +47,18 @@ public class calorieTracker extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calorie_tracker);
         database = AppDatabase.getDatabase(getApplicationContext());
-        dailyCalories = (int) getIntent().getDoubleExtra("calories", 2000.00);
+
         String email = SaveSharedPreference.getUserName(getApplicationContext());
         long id = database.userDao().getUserId(email);
-        Macro macro = database.macroDao().getMacro(id);
+        MacroPlan macroPlan = database.macroPlanDao().getMacroPlan(id);
         dailyCaloriesProgressBar = (ProgressBar) findViewById(R.id.caloriesProgressBar);
-        dailyCaloriesProgressBar.setMax(macro.getCalories().intValue());
+        dailyCaloriesProgressBar.setMax(macroPlan.getCalories().intValue());
         proteinProgressBar = (ProgressBar) findViewById(R.id.proteinProgressBar);
-        proteinProgressBar.setMax(macro.getProtein().intValue());
+        proteinProgressBar.setMax(macroPlan.getProtein().intValue());
         fatProgressBar = (ProgressBar) findViewById(R.id.fatProgressBar);
-        fatProgressBar.setMax(macro.getFat().intValue());
+        fatProgressBar.setMax(macroPlan.getFat().intValue());
         carbProgressBar = (ProgressBar) findViewById(R.id.carbProgressBar);
-        carbProgressBar.setMax(macro.getCarb().intValue());
+        carbProgressBar.setMax(macroPlan.getCarb().intValue());
 
         caloriesProgressTextView = (TextView) findViewById(R.id.caloriesProgressTextView);
         proteinProgressTextView = (TextView) findViewById(R.id.proteinProgressTextView);
@@ -86,6 +87,14 @@ public class calorieTracker extends AppCompatActivity {
             }
         }));
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
     public void populateSpinner() {
 
         List<String> list = database.mealDao().getAllMeals();

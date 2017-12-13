@@ -1,6 +1,6 @@
 package com.erictossell.fitnesstracker;
 
-import com.erictossell.fitnesstracker.Database.Macro;
+import com.erictossell.fitnesstracker.Database.MacroPlan;
 
 
 /**
@@ -76,8 +76,8 @@ public class Util {
         return calories;
 
     }
-    public Macro calculateMacro(long id, Double calories, Double weight, int goal) {
-         Macro macro = new Macro();
+    public MacroPlan calculateMacro(long id, Double calories, Double weight, int goal) {
+         MacroPlan macroPlan = new MacroPlan();
 
          double calcCalories;
          double protein;
@@ -89,7 +89,7 @@ public class Util {
             fat = calories*0.111 * 0.3;
             calcCalories = calories-(protein*4.00)-(fat*9);
             carb = calcCalories*0.25;
-            macro = new Macro(id, protein, fat, carb, calories);
+            macroPlan = new MacroPlan(id, protein, fat, carb, calories);
 
             break;
         case 2:
@@ -97,7 +97,7 @@ public class Util {
             fat = calories*0.111 * 0.3;
             calcCalories = calories-(protein*4.00)-(fat*9);
             carb = calcCalories*0.25;
-            macro = new Macro(id, protein, fat, carb, calories);
+            macroPlan = new MacroPlan(id, protein, fat, carb, calories);
 
             break;
 
@@ -106,7 +106,7 @@ public class Util {
             carb = weight * 1.3;
             calcCalories = calories-(protein*4.00)-(carb*4);
             fat = calcCalories*0.111;
-            macro = new Macro(id, protein, fat, carb, calories);
+            macroPlan = new MacroPlan(id, protein, fat, carb, calories);
 
             break;
         case 4:
@@ -114,7 +114,7 @@ public class Util {
             fat = calories*0.111 * 0.3;
             calcCalories = calories -(protein*4)-(fat*9);
             carb = calcCalories*0.25;
-            macro = new Macro(id, protein, fat, carb, calories);
+            macroPlan = new MacroPlan(id, protein, fat, carb, calories);
 
             break;
         case 5:
@@ -122,11 +122,11 @@ public class Util {
             fat = calories*0.111 * 0.3;
             calcCalories = calories -(protein*4)-(fat*9);
             carb = calcCalories*0.25;
-            macro = new Macro(id, protein, fat, carb, calories);
+            macroPlan = new MacroPlan(id, protein, fat, carb, calories);
 
             break;
 
             }
-        return macro;
+        return macroPlan;
     }
 }

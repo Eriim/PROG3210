@@ -7,8 +7,8 @@ import android.arch.persistence.room.TypeConverters;
 import android.content.Context;
 
 
-@Database(entities={User.class, Meal.class, Weight.class, Macro.class},
-version = 24, exportSchema = false)
+@Database(entities={User.class, Meal.class, Weight.class, MacroPlan.class},
+version = 23, exportSchema = false)
 @TypeConverters({DateConverter.class})
 public abstract class AppDatabase extends RoomDatabase{
     private static AppDatabase INSTANCE;
@@ -16,7 +16,7 @@ public abstract class AppDatabase extends RoomDatabase{
     public abstract UserDao userDao();
     public abstract MealDao mealDao();
     public abstract WeightDao weightDao();
-    public abstract MacroDao macroDao();
+    public abstract MacroPlanDao macroPlanDao();
 
     public static AppDatabase getDatabase(Context context) {
         if (INSTANCE == null) {

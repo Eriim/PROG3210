@@ -1,5 +1,6 @@
 package com.erictossell.fitnesstracker;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.erictossell.fitnesstracker.Database.AppDatabase;
+import com.erictossell.fitnesstracker.Database.SaveSharedPreference;
 import com.erictossell.fitnesstracker.Database.User;
 
 public class signUp extends AppCompatActivity {
@@ -49,6 +51,8 @@ public class signUp extends AppCompatActivity {
             database.userDao().addUser(user);
             Intent intent = new Intent(getBaseContext(), createProfile.class);
             intent.putExtra("username", email);
+            Context context = this;
+            SaveSharedPreference.setUserName(context, email);
             startActivity(intent);
         }
     }

@@ -9,11 +9,10 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.erictossell.fitnesstracker.Database.AppDatabase;
-import com.erictossell.fitnesstracker.Database.Macro;
+import com.erictossell.fitnesstracker.Database.MacroPlan;
 import com.erictossell.fitnesstracker.Database.SaveSharedPreference;
 
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
 
 public class macroPlans extends AppCompatActivity {
 
@@ -84,28 +83,28 @@ public class macroPlans extends AppCompatActivity {
         cleanBulkCalories = maintenanceCalories + 500;
         hardBulkCalories = maintenanceCalories + 1000;
         Util util = new Util();
-        final Macro hardCutMacro = util.calculateMacro(id, hardCutCalories, weight, 1);
-        hardCutMacros = formatter.format(hardCutMacro.getProtein()) +"P/" + formatter.format(hardCutMacro.getFat()) + "F/" + formatter.format(hardCutMacro.getCarb()) + "C";
+        final MacroPlan hardCutMacroPlan = util.calculateMacro(id, hardCutCalories, weight, 1);
+        hardCutMacros = formatter.format(hardCutMacroPlan.getProtein()) +"P/" + formatter.format(hardCutMacroPlan.getFat()) + "F/" + formatter.format(hardCutMacroPlan.getCarb()) + "C";
         hardCutMacrosTextView.setText(hardCutMacros);
 
-        final Macro cutMacro = util.calculateMacro(id, cutCalories, weight, 2);
-        cutMacros = formatter.format(cutMacro.getProtein()) +"P/" + formatter.format(cutMacro.getFat()) + "F/" + formatter.format(cutMacro.getCarb()) + "C";
+        final MacroPlan cutMacroPlan = util.calculateMacro(id, cutCalories, weight, 2);
+        cutMacros = formatter.format(cutMacroPlan.getProtein()) +"P/" + formatter.format(cutMacroPlan.getFat()) + "F/" + formatter.format(cutMacroPlan.getCarb()) + "C";
         cutMacrosTextView.setText(cutMacros);
 
-        final Macro maintenanceMacro = util.calculateMacro(id, maintenanceCalories, weight, 3);
-        maintenanceMacros = formatter.format(maintenanceMacro.getProtein()) +"P/" + formatter.format(maintenanceMacro.getFat()) + "F/" + formatter.format(maintenanceMacro.getCarb()) + "C";
+        final MacroPlan maintenanceMacroPlan = util.calculateMacro(id, maintenanceCalories, weight, 3);
+        maintenanceMacros = formatter.format(maintenanceMacroPlan.getProtein()) +"P/" + formatter.format(maintenanceMacroPlan.getFat()) + "F/" + formatter.format(maintenanceMacroPlan.getCarb()) + "C";
         maintenanceMacrosTextView.setText(maintenanceMacros);
 
-        final Macro cleanBulkMacro = util.calculateMacro(id, cleanBulkCalories, weight, 4);
-        cleanBulkMacros = formatter.format(cleanBulkMacro.getProtein()) +"P/" + formatter.format(cleanBulkMacro.getFat()) + "F/" + formatter.format(cleanBulkMacro.getCarb()) + "C";
+        final MacroPlan cleanBulkMacroPlan = util.calculateMacro(id, cleanBulkCalories, weight, 4);
+        cleanBulkMacros = formatter.format(cleanBulkMacroPlan.getProtein()) +"P/" + formatter.format(cleanBulkMacroPlan.getFat()) + "F/" + formatter.format(cleanBulkMacroPlan.getCarb()) + "C";
         cleanBulkMacrosTextView.setText(cleanBulkMacros);
 
-        final Macro hardBulkMacro = util.calculateMacro(id, hardBulkCalories, weight, 5);
-        hardBulkMacros = formatter.format(hardBulkMacro.getProtein()) +"P/" + formatter.format(hardBulkMacro.getFat()) + "F/" + formatter.format(hardBulkMacro.getCarb()) + "C";
+        final MacroPlan hardBulkMacroPlan = util.calculateMacro(id, hardBulkCalories, weight, 5);
+        hardBulkMacros = formatter.format(hardBulkMacroPlan.getProtein()) +"P/" + formatter.format(hardBulkMacroPlan.getFat()) + "F/" + formatter.format(hardBulkMacroPlan.getCarb()) + "C";
         hardBulkMacrosTextView.setText(hardBulkMacros);
 
-        Macro macro = util.calculateMacro(id, hardCutCalories, weight, 1);
-        hardCutMacros = formatter.format(macro.getProtein()) +"P/" + formatter.format(macro.getFat()) + "F/" + formatter.format(macro.getCarb()) + "C";
+        MacroPlan macroPlan = util.calculateMacro(id, hardCutCalories, weight, 1);
+        hardCutMacros = formatter.format(macroPlan.getProtein()) +"P/" + formatter.format(macroPlan.getFat()) + "F/" + formatter.format(macroPlan.getCarb()) + "C";
         hardCutMacrosTextView.setText(hardCutMacros);
         hardCutCaloriesTextView.setText(formatter.format(hardCutCalories));
         cutCaloriesTextView.setText(formatter.format(cutCalories));
@@ -115,7 +114,7 @@ public class macroPlans extends AppCompatActivity {
 
         hardCut.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                database.macroDao().addMacro(hardCutMacro);
+                database.macroPlanDao().addMacro(hardCutMacroPlan);
                 Intent intent = new Intent(macroPlans.this, calorieTracker.class);
                 intent.putExtra("calories", hardCutCalories);
                 startActivity(intent);
@@ -123,7 +122,7 @@ public class macroPlans extends AppCompatActivity {
         });
         cut.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                database.macroDao().addMacro(cutMacro);
+                database.macroPlanDao().addMacro(cutMacroPlan);
                 Intent intent = new Intent(macroPlans.this, calorieTracker.class);
                 intent.putExtra("calories", cutCalories);
                 startActivity(intent);
@@ -131,7 +130,7 @@ public class macroPlans extends AppCompatActivity {
         });
         maintenance.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                database.macroDao().addMacro(maintenanceMacro);
+                database.macroPlanDao().addMacro(maintenanceMacroPlan);
                 Intent intent = new Intent(macroPlans.this, calorieTracker.class);
                 intent.putExtra("calories", maintenanceCalories);
                 startActivity(intent);
@@ -139,7 +138,7 @@ public class macroPlans extends AppCompatActivity {
         });
         cleanBulk.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                database.macroDao().addMacro(cleanBulkMacro);
+                database.macroPlanDao().addMacro(cleanBulkMacroPlan);
                 Intent intent = new Intent(macroPlans.this, calorieTracker.class);
                 intent.putExtra("calories", cleanBulkCalories);
                 startActivity(intent);
@@ -147,7 +146,7 @@ public class macroPlans extends AppCompatActivity {
         });
         hardBulk.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                database.macroDao().addMacro(hardBulkMacro);
+                database.macroPlanDao().addMacro(hardBulkMacroPlan);
                 Intent intent = new Intent(macroPlans.this, calorieTracker.class);
                 intent.putExtra("calories", hardBulkCalories);
                 startActivity(intent);

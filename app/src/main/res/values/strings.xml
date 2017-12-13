@@ -33,4 +33,6 @@
     <string name="cleanBulkPlan">Clean Bulk :</string>
     <string name="hardBulkPlan">Hard Bulk :</string>
     <string name="pounds">lbs</string>
+    <string name="calorieTracker">Tracker</string>
+    <string name="Profile">Profile</string>
 </resources>
