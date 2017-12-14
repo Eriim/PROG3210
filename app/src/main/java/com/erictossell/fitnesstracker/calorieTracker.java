@@ -37,7 +37,7 @@ public class calorieTracker extends AppCompatActivity {
     private TextView fatProgressTextView;
     private TextView carbProgressTextView;
 
-
+    private MacroPlan dailyMacro;
     private Integer dailyCalories;
     private Integer addCalories;
     private Integer currentCalories;
@@ -86,17 +86,19 @@ public class calorieTracker extends AppCompatActivity {
                 startActivity(intent);
             }
         }));
+
+        if (dailyMacro == null) {
+            dailyMacro = new MacroPlan(id, 0.00, 0.00, 0.00, 0.00);
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
-
         return super.onCreateOptionsMenu(menu);
     }
 
     public void populateSpinner() {
-
         List<String> list = database.mealDao().getAllMeals();
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, list);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

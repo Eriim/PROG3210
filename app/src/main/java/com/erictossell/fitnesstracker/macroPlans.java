@@ -23,6 +23,7 @@ public class macroPlans extends AppCompatActivity {
     private Double cleanBulkCalories;
     private Double hardBulkCalories;
 
+    private MacroPlan dailyMacro;
     private String email;
     private long id;
     private Double weight;
@@ -112,6 +113,7 @@ public class macroPlans extends AppCompatActivity {
         cleanBulkCaloriesTextView.setText(formatter.format(cleanBulkCalories));
         hardBulkCaloriesTextView.setText(formatter.format(hardBulkCalories));
 
+
         hardCut.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 database.macroPlanDao().addMacro(hardCutMacroPlan);
@@ -152,6 +154,7 @@ public class macroPlans extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
 
 
