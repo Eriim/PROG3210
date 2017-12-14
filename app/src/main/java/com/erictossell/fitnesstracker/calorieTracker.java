@@ -29,8 +29,6 @@ public class calorieTracker extends AppCompatActivity {
     private Button addCaloriesButton;
     private Button addMealButton;
     private Button eatMealButton;
-    private TextView totalCaloriesTextView;
-    private TextView currentCaloriesTextView;
     private Spinner mealSpinner;
     private TextView caloriesProgressTextView;
     private TextView proteinProgressTextView;
@@ -38,9 +36,10 @@ public class calorieTracker extends AppCompatActivity {
     private TextView carbProgressTextView;
 
     private MacroPlan dailyMacro;
-    private Integer dailyCalories;
-    private Integer addCalories;
-    private Integer currentCalories;
+    private int protein;
+    private int fat;
+    private int carb;
+    private int calories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +47,14 @@ public class calorieTracker extends AppCompatActivity {
         setContentView(R.layout.activity_calorie_tracker);
         database = AppDatabase.getDatabase(getApplicationContext());
 
+        protein = SaveSharedPreference.getProtein(getApplicationContext());
+        fat = SaveSharedPreference.getFat(getApplicationContext());
+        carb = SaveSharedPreference.getCarb(getApplicationContext());
+        calories = SaveSharedPreference.getCalories(getApplicationContext());
         String email = SaveSharedPreference.getUserName(getApplicationContext());
         long id = database.userDao().getUserId(email);
         MacroPlan macroPlan = database.macroPlanDao().getMacroPlan(id);
+
         dailyCaloriesProgressBar = (ProgressBar) findViewById(R.id.caloriesProgressBar);
         dailyCaloriesProgressBar.setMax(macroPlan.getCalories().intValue());
         proteinProgressBar = (ProgressBar) findViewById(R.id.proteinProgressBar);
@@ -59,6 +63,10 @@ public class calorieTracker extends AppCompatActivity {
         fatProgressBar.setMax(macroPlan.getFat().intValue());
         carbProgressBar = (ProgressBar) findViewById(R.id.carbProgressBar);
         carbProgressBar.setMax(macroPlan.getCarb().intValue());
+        proteinProgressBar.setProgress(protein);
+        fatProgressBar.setProgress(fat);
+        carbProgressBar.setProgress(carb);
+        dailyCaloriesProgressBar.setProgress(calories);
 
         caloriesProgressTextView = (TextView) findViewById(R.id.caloriesProgressTextView);
         proteinProgressTextView = (TextView) findViewById(R.id.proteinProgressTextView);
@@ -73,10 +81,21 @@ public class calorieTracker extends AppCompatActivity {
         eatMealButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Meal meal = database.mealDao().getMeal(mealSpinner.getSelectedItem().toString());
-                dailyCaloriesProgressBar.incrementProgressBy(meal.getCalories());
-                proteinProgressBar.incrementProgressBy(meal.getProtein());
-                fatProgressBar.incrementProgressBy(meal.getFat());
-                carbProgressBar.incrementProgressBy(meal.getCarbohydrates());
+
+                protein = protein + meal.getProtein();
+                fat = fat + meal.getFat();
+                carb = carb + meal.getCarbohydrates();
+                calories = calories + meal.getCalories();
+                SaveSharedPreference.setDailyProtein(getApplicationContext(), protein);
+                SaveSharedPreference.setDailyFat(getApplicationContext(), fat);
+                SaveSharedPreference.setDailyCarb(getApplicationContext(), carb);
+                SaveSharedPreference.setDailyCalorie(getApplicationContext(), calories);
+
+                proteinProgressBar.setProgress(protein);
+                fatProgressBar.setProgress(fat);
+                carbProgressBar.setProgress(carb);
+                dailyCaloriesProgressBar.setProgress(calories);
+
                 populateProgess();
             }
         });
