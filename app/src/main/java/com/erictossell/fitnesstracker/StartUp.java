@@ -17,19 +17,21 @@ import java.util.Locale;
 /**
  * Created by erict on 12/10/2017.
  */
-
+// runs on application start
 public class StartUp extends Application {
     @Override
     public void onCreate(){
         super.onCreate();
         Context context = this;
+        // initializes external view to database via Chrome://inspect
         Stetho.InitializerBuilder initializerBuilder = Stetho.newInitializerBuilder(this);
         initializerBuilder.enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this));
         initializerBuilder.enableDumpapp(Stetho.defaultDumperPluginsProvider(context));
         Stetho.Initializer initializer = initializerBuilder.build();
         Stetho.initialize(initializer);
-
+        // if they haven't logged in before display calorie tracker page
         if(SaveSharedPreference.getUserName(context).length() == 0){
+            // reset daily macros once a day
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm", Locale.CANADA);
             String lastReset = SaveSharedPreference.getLastResetDate(context);
                 try {
@@ -44,6 +46,7 @@ public class StartUp extends Application {
             Intent intent = new Intent(context, splashscreen.class);
             startActivity(intent);
         }
+        // if they have logged in before
         else {
             Intent intent = new Intent(context, calorieTracker.class);
             startActivity(intent);

@@ -42,73 +42,32 @@ public class calorieTracker extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calorie_tracker);
+        // initialize database
         database = AppDatabase.getDatabase(getApplicationContext());
 
+        // retrieve current user macros
         protein = SaveSharedPreference.getProtein(getApplicationContext());
         fat = SaveSharedPreference.getFat(getApplicationContext());
         carb = SaveSharedPreference.getCarb(getApplicationContext());
         calories = SaveSharedPreference.getCalories(getApplicationContext());
+        // retrieve user email
         String email = SaveSharedPreference.getUserName(getApplicationContext());
+        // retrieve user ID with email for use later on
         long id = database.userDao().getUserId(email);
-        MacroPlan macroPlan = database.macroPlanDao().getMacroPlan(id);
+        // retrieve users macroNutrients for the day
+        final MacroPlan macroPlan = database.macroPlanDao().getMacroPlan(id);
 
+        // if they havent selected a plan redirect to the createProfile page
         if(macroPlan == null) {
             Intent intent = new Intent(calorieTracker.this, createProfile.class);
             startActivity(intent);
         }
+        // if they have user data continue to initialize activity
         else {
-            dailyCaloriesProgressBar = (ProgressBar) findViewById(R.id.caloriesProgressBar);
-            dailyCaloriesProgressBar.setMax(macroPlan.getCalories().intValue());
-            proteinProgressBar = (ProgressBar) findViewById(R.id.proteinProgressBar);
-            proteinProgressBar.setMax(macroPlan.getProtein().intValue());
-            fatProgressBar = (ProgressBar) findViewById(R.id.fatProgressBar);
-            fatProgressBar.setMax(macroPlan.getFat().intValue());
-            carbProgressBar = (ProgressBar) findViewById(R.id.carbProgressBar);
-            carbProgressBar.setMax(macroPlan.getCarb().intValue());
-            proteinProgressBar.setProgress(protein);
-            fatProgressBar.setProgress(fat);
-            carbProgressBar.setProgress(carb);
-            dailyCaloriesProgressBar.setProgress(calories);
-
-            caloriesProgressTextView = (TextView) findViewById(R.id.caloriesProgressTextView);
-            proteinProgressTextView = (TextView) findViewById(R.id.proteinProgressTextView);
-            fatProgressTextView = (TextView) findViewById(R.id.fatProgressTextView);
-            carbProgressTextView = (TextView) findViewById(R.id.carbProgressTextView);
-            populateProgess();
-
-            mealSpinner = (Spinner) findViewById(R.id.mealSpinner);
-            populateSpinner();
-            addMealButton = (Button) findViewById(R.id.addMealButton);
-            eatMealButton = (Button) findViewById(R.id.eatMealButton);
-            eatMealButton.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Meal meal = database.mealDao().getMeal(mealSpinner.getSelectedItem().toString());
-
-                    protein = protein + meal.getProtein();
-                    fat = fat + meal.getFat();
-                    carb = carb + meal.getCarbohydrates();
-                    calories = calories + meal.getCalories();
-                    SaveSharedPreference.setDailyProtein(getApplicationContext(), protein);
-                    SaveSharedPreference.setDailyFat(getApplicationContext(), fat);
-                    SaveSharedPreference.setDailyCarb(getApplicationContext(), carb);
-                    SaveSharedPreference.setDailyCalorie(getApplicationContext(), calories);
-
-                    proteinProgressBar.setProgress(protein);
-                    fatProgressBar.setProgress(fat);
-                    carbProgressBar.setProgress(carb);
-                    dailyCaloriesProgressBar.setProgress(calories);
-
-                    populateProgess();
-                }
-            });
-            addMealButton.setOnClickListener((new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(calorieTracker.this, addMeal.class);
-                    startActivity(intent);
-                }
-            }));
+            initialize(macroPlan);
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -116,12 +75,14 @@ public class calorieTracker extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    // get items from meal database to spinner
     public void populateSpinner() {
         List<String> list = database.mealDao().getAllMeals();
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, list);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mealSpinner.setAdapter(dataAdapter);
     }
+    // updates textviews relating to progress
     public void populateProgess() {
         int currentCalories = dailyCaloriesProgressBar.getProgress();
         int currentProtein = proteinProgressBar.getProgress();
@@ -139,5 +100,58 @@ public class calorieTracker extends AppCompatActivity {
         proteinProgressTextView.setText(protein);
         fatProgressTextView.setText(fat);
         carbProgressTextView.setText(carb);
+    }
+    //runs on create
+    private void initialize(MacroPlan macroPlan) {
+        dailyCaloriesProgressBar = (ProgressBar) findViewById(R.id.caloriesProgressBar);
+        dailyCaloriesProgressBar.setMax(macroPlan.getCalories().intValue());
+        proteinProgressBar = (ProgressBar) findViewById(R.id.proteinProgressBar);
+        proteinProgressBar.setMax(macroPlan.getProtein().intValue());
+        fatProgressBar = (ProgressBar) findViewById(R.id.fatProgressBar);
+        fatProgressBar.setMax(macroPlan.getFat().intValue());
+        carbProgressBar = (ProgressBar) findViewById(R.id.carbProgressBar);
+        carbProgressBar.setMax(macroPlan.getCarb().intValue());
+        proteinProgressBar.setProgress(protein);
+        fatProgressBar.setProgress(fat);
+        carbProgressBar.setProgress(carb);
+        dailyCaloriesProgressBar.setProgress(calories);
+
+        caloriesProgressTextView = (TextView) findViewById(R.id.caloriesProgressTextView);
+        proteinProgressTextView = (TextView) findViewById(R.id.proteinProgressTextView);
+        fatProgressTextView = (TextView) findViewById(R.id.fatProgressTextView);
+        carbProgressTextView = (TextView) findViewById(R.id.carbProgressTextView);
+        populateProgess();
+
+        mealSpinner = (Spinner) findViewById(R.id.mealSpinner);
+        populateSpinner();
+        addMealButton = (Button) findViewById(R.id.addMealButton);
+        eatMealButton = (Button) findViewById(R.id.eatMealButton);
+        eatMealButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Meal meal = database.mealDao().getMeal(mealSpinner.getSelectedItem().toString());
+
+                protein = protein + meal.getProtein();
+                fat = fat + meal.getFat();
+                carb = carb + meal.getCarbohydrates();
+                calories = calories + meal.getCalories();
+                SaveSharedPreference.setDailyProtein(getApplicationContext(), protein);
+                SaveSharedPreference.setDailyFat(getApplicationContext(), fat);
+                SaveSharedPreference.setDailyCarb(getApplicationContext(), carb);
+                SaveSharedPreference.setDailyCalorie(getApplicationContext(), calories);
+
+                proteinProgressBar.setProgress(protein);
+                fatProgressBar.setProgress(fat);
+                carbProgressBar.setProgress(carb);
+                dailyCaloriesProgressBar.setProgress(calories);
+
+                populateProgess();
+            }
+        });
+        addMealButton.setOnClickListener((new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(calorieTracker.this, addMeal.class);
+                startActivity(intent);
+            }
+        }));
     }
 }

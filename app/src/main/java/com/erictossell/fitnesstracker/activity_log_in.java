@@ -14,31 +14,21 @@ import com.erictossell.fitnesstracker.Database.SaveSharedPreference;
 import com.erictossell.fitnesstracker.Database.User;
 
 public class activity_log_in extends AppCompatActivity {
-
+    //variable declaration
     private AppDatabase database;
     private EditText emailEditText;
     private EditText passwordEditText;
-
     private String email;
     private String password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-        database = AppDatabase.getDatabase(getApplicationContext());
-        emailEditText = (EditText) findViewById(R.id.usernameEditText);
-        passwordEditText = (EditText) findViewById(R.id.passwordEditText);
+        initialize();
 
-
-        Button loginButton = (Button) findViewById(R.id.logInButton);
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v){
-                email = emailEditText.getText().toString();
-                password = passwordEditText.getText().toString();
-                confirmLogIn(email, password);
-            }
-        });
     }
+    // Verify user information is entered correctly
     public void confirmLogIn(String email, String password) {
         User user = database.userDao().getUser(email);
         if(user == null){
@@ -57,5 +47,19 @@ public class activity_log_in extends AppCompatActivity {
             finish();
             startActivity(intent);
         }
+    }
+    // Run on open
+    private void initialize(){
+        database = AppDatabase.getDatabase(getApplicationContext());
+        emailEditText = (EditText) findViewById(R.id.usernameEditText);
+        passwordEditText = (EditText) findViewById(R.id.passwordEditText);
+        Button loginButton = (Button) findViewById(R.id.logInButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                email = emailEditText.getText().toString();
+                password = passwordEditText.getText().toString();
+                confirmLogIn(email, password);
+            }
+        });
     }
 }

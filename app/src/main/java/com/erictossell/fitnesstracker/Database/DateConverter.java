@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * Created by etossell8259 on 12/11/2017.
  */
-
+//type converter for ROOM dates
 public class DateConverter {
     @TypeConverter
     public Date toDate(Long value){

@@ -7,6 +7,7 @@ import com.erictossell.fitnesstracker.Database.MacroPlan;
  * Created by etossell8259 on 12/11/2017.
  */
 
+// calculates maintenance calories for user
 public class Util {
     public Double calculateCalories(Double age, Double feet, Double inches, Double weight, Double activity, String gender){
         Double calories = 0.0;
@@ -76,9 +77,9 @@ public class Util {
         return calories;
 
     }
+    // calculate macronutrients based off calories and weight and goal
     public MacroPlan calculateMacro(long id, Double calories, Double weight, int goal) {
          MacroPlan macroPlan = new MacroPlan();
-
          double calcCalories;
          double protein;
          double fat;

@@ -27,6 +27,7 @@ public class trackWeight extends AppCompatActivity {
         weightEditText = (EditText) findViewById(R.id.weightEditText);
         trackWeightButton = (Button) findViewById(R.id.addWeightButton);
 
+        // adds weight object to database
         trackWeightButton.setOnClickListener((new View.OnClickListener() {
             public void onClick(View v) {
                 int value = Integer.parseInt(weightEditText.getText().toString());

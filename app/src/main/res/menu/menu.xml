@@ -11,5 +11,10 @@
         android:title="@string/Profile"
 
         />
+    <item
+        android:id="@+id/menu_trackWeight"
+        android:title="@string/trackWeight"
+
+        />
 
 </menu>

@@ -22,7 +22,7 @@
     <string name="goalWeight">Goal Weight :</string>
     <string name="activity">Activity :</string>
     <string name="calculate">Calculate</string>
-    <string name="none">None</string>
+    <string name="none">Sedentary, little or no exercise</string>
     <string name="gender">Gender :</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
@@ -35,4 +35,5 @@
     <string name="pounds">lbs</string>
     <string name="calorieTracker">Tracker</string>
     <string name="Profile">Profile</string>
+    <string name="trackWeight">Track Weight</string>
 </resources>

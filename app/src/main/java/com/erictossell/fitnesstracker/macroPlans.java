@@ -16,6 +16,7 @@ import java.text.DecimalFormat;
 
 public class macroPlans extends AppCompatActivity {
 
+    // variable declaration
     private AppDatabase database;
     private Double maintenanceCalories;
     private Double hardCutCalories;
@@ -55,12 +56,18 @@ public class macroPlans extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_macro_plans);
+        // initialize database
         database = AppDatabase.getDatabase(getApplicationContext());
+        // get user email
         email = SaveSharedPreference.getUserName(getApplicationContext());
+        // get user id with email
         id = database.userDao().getUserId(email);
+        // need weight to determine macroNutrients
         weight = getIntent().getDoubleExtra("weight", 0.00);
+        // calories as calculated on previous page
         maintenanceCalories = getIntent().getDoubleExtra("maintenanceCalories", 0.00);
 
+        // initialize view elements
         tableLayout = (TableLayout) findViewById(R.id.tableLayout);
         hardCut = (TableRow) findViewById(R.id.hardCut);
         cut = (TableRow) findViewById(R.id.cut);
@@ -78,42 +85,47 @@ public class macroPlans extends AppCompatActivity {
         cleanBulkMacrosTextView = (TextView) findViewById(R.id.cleanBulkMacros);
         hardBulkMacrosTextView = (TextView) findViewById(R.id.hardBulkMacros);
 
+
+        // determine calories for each plan
         DecimalFormat formatter = new DecimalFormat("0");
         hardCutCalories = maintenanceCalories - 1000;
         cutCalories = maintenanceCalories - 500;
         cleanBulkCalories = maintenanceCalories + 500;
         hardBulkCalories = maintenanceCalories + 1000;
         Util util = new Util();
+        // determine macros for first plan
         final MacroPlan hardCutMacroPlan = util.calculateMacro(id, hardCutCalories, weight, 1);
         hardCutMacros = formatter.format(hardCutMacroPlan.getProtein()) +"P/" + formatter.format(hardCutMacroPlan.getFat()) + "F/" + formatter.format(hardCutMacroPlan.getCarb()) + "C";
         hardCutMacrosTextView.setText(hardCutMacros);
 
+        // determine macros for second plan
         final MacroPlan cutMacroPlan = util.calculateMacro(id, cutCalories, weight, 2);
         cutMacros = formatter.format(cutMacroPlan.getProtein()) +"P/" + formatter.format(cutMacroPlan.getFat()) + "F/" + formatter.format(cutMacroPlan.getCarb()) + "C";
         cutMacrosTextView.setText(cutMacros);
 
+        // determine macros for third plan
         final MacroPlan maintenanceMacroPlan = util.calculateMacro(id, maintenanceCalories, weight, 3);
         maintenanceMacros = formatter.format(maintenanceMacroPlan.getProtein()) +"P/" + formatter.format(maintenanceMacroPlan.getFat()) + "F/" + formatter.format(maintenanceMacroPlan.getCarb()) + "C";
         maintenanceMacrosTextView.setText(maintenanceMacros);
 
+        // determine macros for fourth plan
         final MacroPlan cleanBulkMacroPlan = util.calculateMacro(id, cleanBulkCalories, weight, 4);
         cleanBulkMacros = formatter.format(cleanBulkMacroPlan.getProtein()) +"P/" + formatter.format(cleanBulkMacroPlan.getFat()) + "F/" + formatter.format(cleanBulkMacroPlan.getCarb()) + "C";
         cleanBulkMacrosTextView.setText(cleanBulkMacros);
 
+        // determine macros for fifth plan
         final MacroPlan hardBulkMacroPlan = util.calculateMacro(id, hardBulkCalories, weight, 5);
         hardBulkMacros = formatter.format(hardBulkMacroPlan.getProtein()) +"P/" + formatter.format(hardBulkMacroPlan.getFat()) + "F/" + formatter.format(hardBulkMacroPlan.getCarb()) + "C";
         hardBulkMacrosTextView.setText(hardBulkMacros);
 
-        MacroPlan macroPlan = util.calculateMacro(id, hardCutCalories, weight, 1);
-        hardCutMacros = formatter.format(macroPlan.getProtein()) +"P/" + formatter.format(macroPlan.getFat()) + "F/" + formatter.format(macroPlan.getCarb()) + "C";
-        hardCutMacrosTextView.setText(hardCutMacros);
+        // set calorie textviews
         hardCutCaloriesTextView.setText(formatter.format(hardCutCalories));
         cutCaloriesTextView.setText(formatter.format(cutCalories));
         maintenanceCaloriesTextView.setText(formatter.format(maintenanceCalories));
         cleanBulkCaloriesTextView.setText(formatter.format(cleanBulkCalories));
         hardBulkCaloriesTextView.setText(formatter.format(hardBulkCalories));
 
-
+        // on click listenener for first plan
         hardCut.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 database.macroPlanDao().addMacro(hardCutMacroPlan);
@@ -122,6 +134,7 @@ public class macroPlans extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // on click listener for second plan
         cut.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 database.macroPlanDao().addMacro(cutMacroPlan);
@@ -130,6 +143,7 @@ public class macroPlans extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // on click listener for third plan
         maintenance.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 database.macroPlanDao().addMacro(maintenanceMacroPlan);
@@ -138,6 +152,7 @@ public class macroPlans extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // on click listener for fourth plan
         cleanBulk.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 database.macroPlanDao().addMacro(cleanBulkMacroPlan);
@@ -146,6 +161,7 @@ public class macroPlans extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // on click listener for fifth plan
         hardBulk.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 database.macroPlanDao().addMacro(hardBulkMacroPlan);

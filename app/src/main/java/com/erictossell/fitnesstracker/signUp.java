@@ -13,6 +13,8 @@ import com.erictossell.fitnesstracker.Database.SaveSharedPreference;
 import com.erictossell.fitnesstracker.Database.User;
 
 public class signUp extends AppCompatActivity {
+
+    //variable declaration
     private AppDatabase database;
     private EditText emailEditText;
     private EditText passwordEditText;
@@ -26,9 +28,10 @@ public class signUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        // initialize database
         database = AppDatabase.getDatabase(getApplicationContext());
 
-
+        // set up activity view elements
         emailEditText = (EditText) findViewById(R.id.usernameEditText);
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
         confirmPasswordEditText = (EditText) findViewById(R.id.confirmPasswordEditText);
@@ -44,6 +47,7 @@ public class signUp extends AppCompatActivity {
         });
     }
 
+    // confirms registration information is acceptable
     public void confirmRegistration(String email, String password, String confirmPassword) {
         if (password.equals(confirmPassword)){
             User user = new User(email, password);

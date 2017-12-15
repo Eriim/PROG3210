@@ -32,19 +32,20 @@ public class addMeal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_meal);
         database = AppDatabase.getDatabase(getApplicationContext());
-
-
+        initialize();
+    }
+    // run on activity start
+    private void initialize(){
         mealNameEditText = (EditText) findViewById(R.id.mealNameEditText);
         caloriesEditText = (EditText) findViewById(R.id.caloriesEditText);
         proteinEditText = (EditText) findViewById(R.id.proteinEditText);
         fatEditText = (EditText) findViewById(R.id.fatEditText);
         carbEditText = (EditText) findViewById(R.id.carbEditText);
         servingSizeEditText = (EditText) findViewById(R.id.servingSizeEditText);
-        addMealButton = (Button) findViewById(R.id.addMealButton);
 
+        addMealButton = (Button) findViewById(R.id.addMealButton);
         addMealButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-
                 mealName = mealNameEditText.getText().toString();
                 calories = Integer.parseInt(caloriesEditText.getText().toString());
                 protein = Integer.parseInt(proteinEditText.getText().toString());
@@ -54,9 +55,7 @@ public class addMeal extends AppCompatActivity {
                 database.mealDao().addMeal(meal);
                 Intent intent = new Intent(addMeal.this, calorieTracker.class);
                 startActivity(intent);
-
-
             }
-        } );
+        });
     }
 }

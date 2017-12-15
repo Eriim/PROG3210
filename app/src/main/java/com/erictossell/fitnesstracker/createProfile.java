@@ -1,6 +1,7 @@
 package com.erictossell.fitnesstracker;
 
 import com.erictossell.fitnesstracker.Database.AppDatabase;
+import com.erictossell.fitnesstracker.Database.SaveSharedPreference;
 import com.erictossell.fitnesstracker.Util;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +22,6 @@ public class createProfile extends AppCompatActivity {
     private AppDatabase database;
     private TextView activityLevelTextView;
     private TextView caloriesTextView;
-    private EditText nameEditText;
     private EditText ageEditText;
     private EditText feetEditText;
     private EditText inchesEditText;
@@ -35,10 +35,8 @@ public class createProfile extends AppCompatActivity {
     private Double feet;
     private Double inches;
     private Double weight;
-    private Double goalWeight;
     private Double calories;
     private Integer caloriesInt;
-    private String name;
     private String gender;
     private Double activity;
 
@@ -48,10 +46,12 @@ public class createProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_profile);
-        email = getIntent().getStringExtra("username");
+
+        email = SaveSharedPreference.getUserName(getApplicationContext());
         database = AppDatabase.getDatabase(getApplicationContext());
         initialize();
     }
+    // determines string to be displayed upon changing progress bar
     public String activityLevel(Integer progress){
         String result = "";
         if (progress == 0){
@@ -71,6 +71,7 @@ public class createProfile extends AppCompatActivity {
         }
         return result;
     }
+    // runs on start of activity
     public void initialize(){
         Button calculateButton = (Button) findViewById(R.id.calculateCaloriesButton);
         calculateButton.setOnClickListener(new View.OnClickListener(){
@@ -81,7 +82,6 @@ public class createProfile extends AppCompatActivity {
                 else {
                     gender = "female";
                 }
-
                 age = Double.parseDouble(ageEditText.getText().toString());
                 feet = Double.parseDouble(feetEditText.getText().toString());
                 inches = Double.parseDouble(inchesEditText.getText().toString());

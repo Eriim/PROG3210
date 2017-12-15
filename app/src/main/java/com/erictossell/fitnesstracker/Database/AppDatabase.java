@@ -11,6 +11,8 @@ import android.content.Context;
 version = 24, exportSchema = false)
 @TypeConverters({DateConverter.class})
 public abstract class AppDatabase extends RoomDatabase{
+
+    //Variable declaration
     private static AppDatabase INSTANCE;
 
     public abstract UserDao userDao();
@@ -18,6 +20,7 @@ public abstract class AppDatabase extends RoomDatabase{
     public abstract WeightDao weightDao();
     public abstract MacroPlanDao macroPlanDao();
 
+    // Database constructor
     public static AppDatabase getDatabase(Context context) {
         if (INSTANCE == null) {
             INSTANCE = Room.databaseBuilder(context, AppDatabase.class, "fitnesssdatabase")
@@ -27,6 +30,8 @@ public abstract class AppDatabase extends RoomDatabase{
         }
         return INSTANCE;
     }
+
+    // Destroys current instance
     public static void destroyInstance() {
         INSTANCE = null;
     }
