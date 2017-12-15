@@ -91,7 +91,6 @@ public class Util {
             calcCalories = calories-(protein*4.00)-(fat*9);
             carb = calcCalories*0.25;
             macroPlan = new MacroPlan(id, protein, fat, carb, calories);
-
             break;
         case 2:
             protein = weight * 1.1;
@@ -99,16 +98,13 @@ public class Util {
             calcCalories = calories-(protein*4.00)-(fat*9);
             carb = calcCalories*0.25;
             macroPlan = new MacroPlan(id, protein, fat, carb, calories);
-
             break;
-
         case 3:
             protein = weight * 1.0;
             carb = weight * 1.3;
             calcCalories = calories-(protein*4.00)-(carb*4);
             fat = calcCalories*0.111;
             macroPlan = new MacroPlan(id, protein, fat, carb, calories);
-
             break;
         case 4:
             protein = weight*0.8;
@@ -116,7 +112,6 @@ public class Util {
             calcCalories = calories -(protein*4)-(fat*9);
             carb = calcCalories*0.25;
             macroPlan = new MacroPlan(id, protein, fat, carb, calories);
-
             break;
         case 5:
             protein = weight*0.8;
@@ -124,9 +119,7 @@ public class Util {
             calcCalories = calories -(protein*4)-(fat*9);
             carb = calcCalories*0.25;
             macroPlan = new MacroPlan(id, protein, fat, carb, calories);
-
             break;
-
             }
         return macroPlan;
     }
