@@ -10,17 +10,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FitnessTracker">
-        <activity android:name=".MainActivity"
-            android:theme="@style/FitnessTracker"/>
-        <activity android:name=".signUp"
-            android:theme="@style/FitnessTracker"/>
-        <activity android:name=".activity_log_in"
-            android:theme="@style/FitnessTracker"/>
-        <activity android:name=".createProfile"
-            android:theme="@style/FitnessTracker"/>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/FitnessTracker" />
+        <activity
+            android:name=".signUp"
+            android:theme="@style/FitnessTracker" />
+        <activity
+            android:name=".activity_log_in"
+            android:theme="@style/FitnessTracker" />
+        <activity
+            android:name=".createProfile"
+            android:theme="@style/FitnessTracker" />
         <activity
             android:name=".splashscreen"
-
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
@@ -29,13 +32,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".macroPlans"
-            android:theme="@style/FitnessTracker"/>
-        <activity android:name=".calorieTracker"
-            android:theme="@style/FitnessTracker"/>
+        <activity
+            android:name=".macroPlans"
+            android:theme="@style/FitnessTracker" />
+        <activity
+            android:name=".calorieTracker"
+            android:theme="@style/FitnessTracker" />
         <activity
             android:name=".addMeal"
             android:theme="@style/FitnessTracker" />
+        <activity android:name=".trackWeight"></activity>
     </application>
 
 </manifest>

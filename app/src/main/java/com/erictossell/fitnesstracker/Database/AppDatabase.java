@@ -8,7 +8,7 @@ import android.content.Context;
 
 
 @Database(entities={User.class, Meal.class, Weight.class, MacroPlan.class},
-version = 23, exportSchema = false)
+version = 24, exportSchema = false)
 @TypeConverters({DateConverter.class})
 public abstract class AppDatabase extends RoomDatabase{
     private static AppDatabase INSTANCE;

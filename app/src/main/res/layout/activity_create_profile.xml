@@ -6,29 +6,6 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     tools:context="com.erictossell.fitnesstracker.createProfile">
-
-
-    <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-        <TextView
-            android:id="@+id/nameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_span="1"
-            android:layout_gravity="center"
-            android:text="@string/name" />
-        <EditText
-            android:id="@+id/nameEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_span="4"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="" />
-    </TableRow>
-
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">

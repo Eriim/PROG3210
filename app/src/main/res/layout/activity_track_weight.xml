@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.erictossell.fitnesstracker.trackWeight">
+
+    <TextView
+        android:id="@+id/weightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="Weight : "
+        android:layout_marginRight="47dp"
+        android:layout_marginEnd="47dp"
+        android:layout_toLeftOf="@+id/weightEditText"
+        android:layout_toStartOf="@+id/weightEditText" />
+
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/weightTextView"
+        android:layout_alignBottom="@+id/weightTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/addWeightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weightEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Track Weight" />
+
+</RelativeLayout>
