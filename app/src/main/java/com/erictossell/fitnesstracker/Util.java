@@ -73,9 +73,7 @@ public class Util {
                 calories = calories * activityCoefficient;
             }
         }
-
         return calories;
-
     }
     // calculate macronutrients based off calories and weight and goal
     public MacroPlan calculateMacro(long id, Double calories, Double weight, int goal) {

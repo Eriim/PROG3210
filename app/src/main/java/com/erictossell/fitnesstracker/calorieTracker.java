@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
 import android.content.Intent;
@@ -72,7 +73,22 @@ public class calorieTracker extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
-        return super.onCreateOptionsMenu(menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_calorieTracker:
+                startActivity(new Intent(this, calorieTracker.class));
+                return true;
+            case R.id.menu_createProfile:
+                startActivity(new Intent(this, createProfile.class));
+                return true;
+            case R.id.menu_trackWeight:
+                startActivity(new Intent(this, trackWeight.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     // get items from meal database to spinner

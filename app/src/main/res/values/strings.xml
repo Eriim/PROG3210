@@ -33,7 +33,7 @@
     <string name="cleanBulkPlan">Clean Bulk :</string>
     <string name="hardBulkPlan">Hard Bulk :</string>
     <string name="pounds">lbs</string>
-    <string name="calorieTracker">Tracker</string>
+    <string name="calorieTracker">Calories/Macros</string>
     <string name="Profile">Profile</string>
-    <string name="trackWeight">Track Weight</string>
+    <string name="trackWeight">Weight</string>
 </resources>
