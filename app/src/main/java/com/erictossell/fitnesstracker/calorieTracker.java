@@ -1,6 +1,7 @@
 package com.erictossell.fitnesstracker;
 
 import android.app.Activity;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -43,20 +44,21 @@ public class calorieTracker extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calorie_tracker);
+
+        Intent service = new Intent(this, DailyResetService.class);
+        startService(service);
         // initialize database
         database = AppDatabase.getDatabase(getApplicationContext());
 
         // retrieve current user macros
-        protein = SaveSharedPreference.getProtein(getApplicationContext());
-        fat = SaveSharedPreference.getFat(getApplicationContext());
-        carb = SaveSharedPreference.getCarb(getApplicationContext());
-        calories = SaveSharedPreference.getCalories(getApplicationContext());
+
         // retrieve user email
         String email = SaveSharedPreference.getUserName(getApplicationContext());
         // retrieve user ID with email for use later on
         long id = database.userDao().getUserId(email);
         // retrieve users macroNutrients for the day
         final MacroPlan macroPlan = database.macroPlanDao().getMacroPlan(id);
+
 
         // if they havent selected a plan redirect to the createProfile page
         if(macroPlan == null) {
@@ -91,6 +93,8 @@ public class calorieTracker extends AppCompatActivity {
         }
     }
 
+
+
     // get items from meal database to spinner
     public void populateSpinner() {
         List<String> list = database.mealDao().getAllMeals();
@@ -100,10 +104,11 @@ public class calorieTracker extends AppCompatActivity {
     }
     // updates textviews relating to progress
     public void populateProgess() {
-        int currentCalories = dailyCaloriesProgressBar.getProgress();
-        int currentProtein = proteinProgressBar.getProgress();
-        int currentFat = fatProgressBar.getProgress();
-        int currentCarb = carbProgressBar.getProgress();
+        int currentProtein = SaveSharedPreference.getProtein(getApplicationContext());
+        int currentFat = SaveSharedPreference.getFat(getApplicationContext());
+        int currentCarb = SaveSharedPreference.getCarb(getApplicationContext());
+        int currentCalories = SaveSharedPreference.getCalories(getApplicationContext());
+
         int totalCalories = dailyCaloriesProgressBar.getMax();
         int totalProtein = proteinProgressBar.getMax();
         int totalFat = fatProgressBar.getMax();
@@ -117,6 +122,7 @@ public class calorieTracker extends AppCompatActivity {
         fatProgressTextView.setText(fat);
         carbProgressTextView.setText(carb);
     }
+
     //runs on create
     private void initialize(MacroPlan macroPlan) {
         dailyCaloriesProgressBar = (ProgressBar) findViewById(R.id.caloriesProgressBar);
