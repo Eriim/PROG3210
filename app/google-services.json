@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "113867426691",
+    "firebase_url": "https://prog3210-972a7.firebaseio.com",
+    "project_id": "prog3210-972a7",
+    "storage_bucket": "prog3210-972a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113867426691:android:e3bdb32c4da20131",
+        "android_client_info": {
+          "package_name": "com.erictossell.fitnesstracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113867426691-8rg1hev6mqk2u7fsoscgg69t7cnpc9us.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.erictossell.fitnesstracker",
+            "certificate_hash": "b8e8f6b328890e38b76ac221d167fcab2ef0a232"
+          }
+        },
+        {
+          "client_id": "113867426691-68pftd7dds41prbekkb1nb38rkjspms7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0mHbBIPJvXT0hf0P6FHcFRFYir01bFVs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113867426691-68pftd7dds41prbekkb1nb38rkjspms7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
