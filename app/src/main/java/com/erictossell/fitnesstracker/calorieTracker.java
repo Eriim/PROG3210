@@ -123,17 +123,14 @@ public class calorieTracker extends AppCompatActivity {
             String root = Environment.getExternalStorageDirectory().toString();
 
             System.out.println("Downloading");
-            URL url = new URL(urls [0]);
+            URL url = new URL(urls[0]);
 
             URLConnection connection = url.openConnection();
             connection.connect();
-            // getting file length
+
             int lenghtOfFile = connection.getContentLength();
 
-            // input stream to read file - with 8k buffer
             InputStream input = new BufferedInputStream(url.openStream(), 8192);
-
-            // Output stream to write file
 
             OutputStream output = new FileOutputStream(root+"/pdf.pdf");
             byte data[] = new byte[1024];
@@ -141,23 +138,15 @@ public class calorieTracker extends AppCompatActivity {
             long total = 0;
             while ((count = input.read(data)) != -1) {
                 total += count;
-
-                // writing data to file
                 output.write(data, 0, count);
-
             }
-
-            // flushing output
             output.flush();
-
-            // closing streams
             output.close();
             input.close();
 
         } catch (Exception e) {
             Log.e("Error: ", e.getMessage());
         }
-
         return null;
     }
         @Override
