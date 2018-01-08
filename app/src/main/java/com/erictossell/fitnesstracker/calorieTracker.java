@@ -3,12 +3,13 @@ package com.erictossell.fitnesstracker;
 import android.app.Activity;
 import android.arch.persistence.room.OnConflictStrategy;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -34,7 +35,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 
-public class calorieTracker extends AppCompatActivity {
+public class calorieTracker extends Activity {
     private AppDatabase database;
     private ProgressBar dailyCaloriesProgressBar;
     private ProgressBar proteinProgressBar;
@@ -44,6 +45,8 @@ public class calorieTracker extends AppCompatActivity {
     private Button addCaloriesButton;
     private Button addMealButton;
     private Button eatMealButton;
+    private Button emailButton;
+    private Button textButton;
     private Spinner mealSpinner;
     private TextView caloriesProgressTextView;
     private TextView proteinProgressTextView;
@@ -251,6 +254,29 @@ public class calorieTracker extends AppCompatActivity {
                 if(isStoragePermissionGranted()) {
                     new DownloadFilesTask().execute("http://www.pdf995.com/samples/pdf.pdf");
                 }
+            }
+        });
+        emailButton = (Button) findViewById(R.id.emailButton);
+
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO,
+                        Uri.fromParts("mailto", "erictossell@gmail.com", null));
+                startActivity(Intent.createChooser(emailIntent, "Send email..."));
+
+            }
+        });
+        textButton = (Button) findViewById(R.id.textButton);
+        textButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String number = "2267503681";
+                Intent textIntent = new Intent(Intent.ACTION_MAIN);
+                textIntent.addCategory(Intent.CATEGORY_APP_MESSAGING);
+                textIntent.putExtra("address", number);
+                textIntent.putExtra("sms_body", "This is a text!");
+
+                startActivity(textIntent);
+
             }
         });
     }

@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.erictossell.fitnesstracker"
         minSdkVersion 15
@@ -36,6 +36,7 @@ dependencies {
     annotationProcessor 'android.arch.lifecycle:compiler:1.0.0-rc1'
     annotationProcessor 'android.arch.persistence.room:compiler:1.0.0-rc1'
 }
+
 
 
 apply plugin: 'com.google.gms.google-services'

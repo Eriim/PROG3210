@@ -96,11 +96,11 @@
         android:id="@+id/addMealButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:text="Add Meal"
-        android:layout_below="@+id/eatMealButton"
-        android:layout_alignRight="@+id/carbTextView"
-        android:layout_alignEnd="@+id/carbTextView" />
+        android:layout_alignBaseline="@+id/eatMealButton"
+        android:layout_alignBottom="@+id/eatMealButton"
+        android:layout_alignLeft="@+id/carbTextView"
+        android:layout_alignStart="@+id/carbTextView"
+        android:text="Add Meal" />
     <Spinner
         android:id="@+id/mealSpinner"
         android:layout_width="match_parent"
@@ -114,11 +114,11 @@
         android:id="@+id/eatMealButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:text="Eat Meal"
+        android:layout_alignLeft="@+id/carbProgressBar"
+        android:layout_alignStart="@+id/carbProgressBar"
         android:layout_below="@+id/mealSpinner"
-        android:layout_alignRight="@+id/addMealButton"
-        android:layout_alignEnd="@+id/addMealButton" />
+        android:layout_marginTop="16dp"
+        android:text="Eat Meal" />
 
     <TextView
         android:id="@+id/caloriesProgressTextView"
@@ -159,10 +159,29 @@
         android:id="@+id/downloadButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/addMealButton"
+        android:layout_alignLeft="@+id/eatMealButton"
+        android:layout_alignStart="@+id/eatMealButton"
+        android:layout_below="@+id/eatMealButton"
+        android:layout_marginTop="11dp"
         android:text="Download" />
+
+    <Button
+        android:id="@+id/emailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/addMealButton"
+        android:layout_alignStart="@+id/addMealButton"
+        android:layout_alignTop="@+id/downloadButton"
+        android:text="Email" />
+
+    <Button
+        android:id="@+id/textButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/emailButton"
+        android:layout_toEndOf="@+id/addMealButton"
+        android:layout_toRightOf="@+id/addMealButton"
+        android:text="Text (SMS)" />
 
 
 </RelativeLayout>

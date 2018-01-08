@@ -3,73 +3,43 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\4eb31885a7afd7e8afdee7d7229ab186\jars\classes.jar"
+        jar="C:\Users\erict\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\eca1232d47d79140de37520ae1cb14d9\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\11.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\11.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.2.0\c0b52915a48fa91b1b94a28d4a2997bac5f524df\okio-1.2.0.jar"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\2d09d4fbc063b8e8d5f7fe56789535cd\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
-        sha1="c0b52915a48fa91b1b94a28d4a2997bac5f524df">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\35.jar" />
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\10.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho-okhttp\1.1.1\1732524bc9a7c660032c73133ce27749a64ba456\stetho-okhttp-1.1.1.jar"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\3c85505624ba3d950b65dabda85b3037\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
-        sha1="1732524bc9a7c660032c73133ce27749a64ba456">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\14.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\45ed3262b00b8a9acf3183776b4aba1d\jars\classes.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="26.0.2"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.0.0.aar\675026f9b900cd466b6e69c64c359d39\jars\classes.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="26.0.2"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.2\2bf96b7aa8b611c177d329452af1dc933e14501c\commons-cli-1.2.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="26.0.2"
-        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\31.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.2.0\959c454243581fdf730abfd4f4745441724bcf2c\okhttp-2.2.0.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="26.0.2"
-        sha1="959c454243581fdf730abfd4f4745441724bcf2c">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\33.jar" />
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\19.jar" />
     </item>
     <item
         is-multidex="false"
@@ -79,37 +49,27 @@
         optimize="true"
         revision="26.0.2"
         sha1="7fe7e7a0328a07dbf30d0e725796293e76282135">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\30.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\30.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.3\7d7f60c4783872861222166f6164215f8951c7b1\common-1.0.3.jar"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\28924e3e26c3bcc541c79ed54a1a0794\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
-        sha1="7d7f60c4783872861222166f6164215f8951c7b1">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\27.jar" />
+        sha1="e5b429c146094a612134910688d169ec08deeefb">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\5.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\e2abd6a24e8aee2b04c3187bfe825ff1\jars\classes.jar"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\d5df08bc9854b0a7bbcb6cd9ebaedfba\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
         sha1="ed87ccdcb70c17d71ba4e6e4ac16afa62d3c49fb">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\26.1.0\814258103cf26a15fcc26ecce35f5b7d24b73f8\support-annotations-26.1.0.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="26.0.2"
-        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\34.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\7.jar" />
     </item>
     <item
         is-multidex="false"
@@ -119,37 +79,27 @@
         optimize="true"
         revision="26.0.2"
         sha1="957da46db3106b343ced0ea9753432a5c0e29459">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\29.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\29.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\dd0da7c977b72101a8621497335facbe\jars\classes.jar"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\9c631b62eaa2eabfce530b3014d9ec6d\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\19.jar" />
+        sha1="43e9789bd3240271265ab30ce1be9f224843f5a8">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\8.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.0.0.aar\0e25fee1fc2c86440e0b67055bed412e\jars\classes.jar"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.0.0.aar\1237ac61c0824e6bd9d7eaef407e19a5\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\17.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\3bf78dfe1b281a24a29518cf76da971c\jars\classes.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="26.0.2"
-        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\10.jar" />
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\1.jar" />
     </item>
     <item
         is-multidex="false"
@@ -159,17 +109,7 @@
         optimize="true"
         revision="26.0.2"
         sha1="508f50705b4fde51a16259f29c854201a3044516">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\22.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\4e12f7f7623603b816a3becda445c5e1\jars\classes.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="26.0.2"
-        sha1="e1625e48a836779b5fa141d22e5d05563aaccc9a">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\6.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\22.jar" />
     </item>
     <item
         is-multidex="false"
@@ -179,7 +119,17 @@
         optimize="true"
         revision="26.0.2"
         sha1="78120c3d8c142b783fc3a6f456dbfd30b3232e8e">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\13.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\255850913e491f202ce879c29f4b1e41\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e1625e48a836779b5fa141d22e5d05563aaccc9a">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -189,27 +139,7 @@
         optimize="true"
         revision="26.0.2"
         sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\20.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.0.4.aar\7b8d302338d2838ab58dd7873eaac6b9\jars\classes.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="26.0.2"
-        sha1="f47f4d5bdfd7d7bf330945b8a7ccce4ab437a710">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\faaf0b3173bb084864fc4eae0a63b483\jars\classes.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="26.0.2"
-        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\9.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\20.jar" />
     </item>
     <item
         is-multidex="false"
@@ -219,17 +149,17 @@
         optimize="true"
         revision="26.0.2"
         sha1="d7cc5473b9cf4ea159a263cd477fb3ecb2987b96">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\24.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\24.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.0.0.aar\441994946b6d74a3d5cd7e46b9ddab4c\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
-        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\26.jar" />
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\16.jar" />
     </item>
     <item
         is-multidex="false"
@@ -239,7 +169,7 @@
         optimize="true"
         revision="26.0.2"
         sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\23.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\23.jar" />
     </item>
     <item
         is-multidex="false"
@@ -249,7 +179,7 @@
         optimize="true"
         revision="26.0.2"
         sha1="6d39ccad7bcc6647ef820bf940e3b18774d560a4">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\28.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\28.jar" />
     </item>
     <item
         is-multidex="false"
@@ -259,7 +189,7 @@
         optimize="true"
         revision="26.0.2"
         sha1="568f8a0b5899b8b724863d4247d8c42e9acc80dc">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\12.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\12.jar" />
     </item>
     <item
         is-multidex="false"
@@ -269,57 +199,47 @@
         optimize="true"
         revision="26.0.2"
         sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\21.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\21.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.0.0.aar\4d5c1fb1aeb35b4edba62b0203f29b79\jars\classes.jar"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\771d0118c3159c9a3c1af85342ced4fd\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\16.jar" />
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\9.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.0.0.aar\b2f20aa2899f6304fb8669e64b92848b\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
-        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\32.jar" />
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\17.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\modules-2\files-2.1\com.android.support.constraint\constraint-layout-solver\1.0.2\b9cd8fc6bd15cb915735d34535db30ece0c44603\constraint-layout-solver-1.0.2.jar"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.0.4.aar\6556cb2b1460f9b077e28064b4b1398d\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\18.jar" />
+        sha1="f47f4d5bdfd7d7bf330945b8a7ccce4ab437a710">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\3.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\ee098f105271c3e9757b3d678a656bdc\jars\classes.jar"
+        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\a1ee3ef83bae71e95f2208fc1e7ebb32\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="15"
         optimize="true"
         revision="26.0.2"
-        sha1="43e9789bd3240271265ab30ce1be9f224843f5a8">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\2372766befd0ef9e55504adfdd911c34\jars\classes.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="26.0.2"
-        sha1="e5b429c146094a612134910688d169ec08deeefb">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\5.jar" />
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\2.jar" />
     </item>
     <item
         is-multidex="false"
@@ -329,17 +249,7 @@
         optimize="true"
         revision="26.0.2"
         sha1="89234dc34ba02fbf2bfbf90a9c45325731c46bf6">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\25.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\erict\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho\1.1.1\ab1142c5adfa474e7494cba19fd9fc6e73207960\stetho-1.1.1.jar"
-        jumboMode="false"
-        min-sdk-version="15"
-        optimize="true"
-        revision="26.0.2"
-        sha1="ab1142c5adfa474e7494cba19fd9fc6e73207960">
-        <dex dex="C:\Projects\PROG3210\app\build\intermediates\transforms\preDex\release\15.jar" />
+        <dex dex="C:\Users\erict\Desktop\PROG3210\app\build\intermediates\transforms\preDex\release\25.jar" />
     </item>
 
 </items>
