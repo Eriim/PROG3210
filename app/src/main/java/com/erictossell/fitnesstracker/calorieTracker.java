@@ -9,7 +9,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-//import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -35,7 +35,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 
-public class calorieTracker extends Activity {
+public class calorieTracker extends AppCompatActivity {
     private AppDatabase database;
     private ProgressBar dailyCaloriesProgressBar;
     private ProgressBar proteinProgressBar;
