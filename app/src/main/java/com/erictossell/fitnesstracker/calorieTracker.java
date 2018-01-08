@@ -88,7 +88,7 @@ public class calorieTracker extends AppCompatActivity {
             populateProgess();
         }
     }
-
+// comment
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
